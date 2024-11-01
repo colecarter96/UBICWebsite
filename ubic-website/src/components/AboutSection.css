@@ -1,0 +1,23 @@
+.about-section {
+    padding-bottom: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FAF9F6;
+    padding-top: 2rem;
+}
+
+.about-section h3 {
+    font-size: 1.7rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    
+}
+
+.about-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    width: 50%;
+    padding-left: 25%;
+    
+}

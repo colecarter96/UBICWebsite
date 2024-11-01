@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background-color: transparent;
+    color: black;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header nav ul {
+    display: flex;
+    gap: 3rem;
+    list-style-type: none;
+    padding-right: 5rem;
+    color: black;
+}
+
+.header nav ul li {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
