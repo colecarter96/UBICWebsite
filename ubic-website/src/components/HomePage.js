@@ -1,12 +1,23 @@
 import React from 'react';
+import Header from './Header';
+import Hero from './Hero';
+import AboutSection from './AboutSection';
+import InstagramEmbedding from './InstagramEmbedding';
+import NewsletterSection from './NewsletterSection';
+import Footer from './Footer';
+
 
 function HomePage() {
-    console.log("OOOOOOOOOGAAAAABOOOOOOOOOOGAAAAA");
     return (
-        <div>
-            <h1>Home Page</h1>
+        <div className="HomePage">
+            <Header />
+            <Hero />
+            <AboutSection />
+            {/* <InstagramEmbedding /> */}
+            <NewsletterSection />
+            <Footer />
         </div>
-         
+
     );
 }
 

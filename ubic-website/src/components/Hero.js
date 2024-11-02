@@ -4,7 +4,7 @@ import heroIMG from './sunset-cliff-san-diego.png'
 import heroIMG1 from './torrySunset.png'
 
 function Hero() {
-    return (
+    return (        
         <section className="hero">
             <img src={heroIMG1} alt="Hero background" className="hero-background" />
             <div className="hero-text">
