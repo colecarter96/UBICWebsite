@@ -4,7 +4,7 @@ import './EventCard.css'; // Create this file for styling if needed
 const EventCard = ({ title, date, description }) => {
     return (
         <div className="event-card">
-            <h2>{title}</h2>
+            <h3>{title}</h3>
             <p>{date}</p>
             <p>{description}</p>
         </div>

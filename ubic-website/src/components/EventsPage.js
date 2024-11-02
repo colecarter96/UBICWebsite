@@ -3,7 +3,8 @@ import Header from './Header';
 import Hero from './Hero';
 import Footer from './Footer';
 import EventCard from './EventCard';
-import './EventsPage.css'
+import './EventsPage.css';
+import EventCardsContainer from './EventCardsContainer';
 
 const EventsPage = () => {
     // Sample event data (you can replace this with real data from an API or database)
@@ -25,13 +26,7 @@ const EventsPage = () => {
         <div className="events-page">
             <Header />
             <Hero size="small"/>
-
-            <h1>Events This Quarter</h1>
-            <div className="event-cards-container">
-                {events.map((event, index) => (
-                    <EventCard key={index} title={event.title} date={event.date} description={event.description} />
-                ))}
-            </div>
+            <EventCardsContainer events={events} title={"Events this Quarter"}/>
 
             <Footer />
         </div>
