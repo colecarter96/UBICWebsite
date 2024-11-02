@@ -11,7 +11,7 @@ function HomePage() {
     return (
         <div className="HomePage">
             <Header />
-            <Hero />
+            <Hero size="large"/>
             <AboutSection />
             {/* <InstagramEmbedding /> */}
             <NewsletterSection />
