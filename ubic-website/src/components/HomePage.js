@@ -17,6 +17,7 @@ function HomePage() {
             <NewsletterSection />
             <Footer />
         </div>
+
     );
 }
 

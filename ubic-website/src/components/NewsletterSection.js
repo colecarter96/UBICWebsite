@@ -11,4 +11,4 @@ function NewsletterSection() {
     );
 }
 
-export default NewsletterSection;
+export default NewsletterSection;   
