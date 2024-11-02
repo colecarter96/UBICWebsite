@@ -1,21 +1,16 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import AboutSection from './components/AboutSection';
-import InstagramEmbedding from './components/InstagramEmbedding';
-import NewsletterSection from './components/NewsletterSection';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './components/HomePage'; // Your basic test component
+import EventsPage from './components/EventsPage';
 
 function App() {
     return (
-        <div className="App">
-            <Header />
-            <Hero />
-            <AboutSection />
-            {/* <InstagramEmbedding /> */}
-            <NewsletterSection />
-            <Footer />
-        </div>
+        
+        <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route path="/events" element={<EventsPage />} />
+        </Routes>
+        
     );
 }
 
