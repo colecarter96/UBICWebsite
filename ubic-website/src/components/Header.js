@@ -12,7 +12,10 @@ function Header() {
                         <li>Events</li>
                     </Link>
                     <li>About</li>
-                    <li>Team</li>
+                    <Link to='/team' className="myLink">
+                        <li>Team</li>
+                    </Link>
+                    
                 </ul>
             </nav>
         </header>

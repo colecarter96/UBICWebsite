@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from './Header';
-import Hero from './Hero';
-import Footer from './Footer';
-import EventCard from './EventCard';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import Footer from '../components/Footer';
+import EventCard from '../components/EventCard';
 import './EventsPage.css';
-import EventCardsContainer from './EventCardsContainer';
+import EventCardsContainer from '../components/EventCardsContainer';
 
 const EventsPage = () => {
     // Sample event data (you can replace this with real data from an API or database)

@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from './Header';
-import Hero from './Hero';
-import AboutSection from './AboutSection'
-import NewsletterSection from './NewsletterSection';
-import Footer from './Footer';
-import EventCardsContainer from './EventCardsContainer';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import AboutSection from '../components/AboutSection'
+import NewsletterSection from '../components/NewsletterSection';
+import Footer from '../components/Footer';
+import EventCardsContainer from '../components/EventCardsContainer';
 
 // Sample data - Replace this with actual data from an API or database
 const events = [
