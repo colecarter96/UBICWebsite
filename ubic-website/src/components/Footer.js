@@ -1,8 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import discordImg from './discord.png' 
-import fanFanImg from './fanfan.png'
-import monocerosImg from './monoceros1.png'
+
 
 function Footer() {
     return (
@@ -14,14 +12,14 @@ function Footer() {
                 </div>
                 <div className="footer-section">
                     <p>Join the Community</p>
-                    <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
-                        <img src={discordImg} alt="Discord" />
+                    <a href="https://discord.gg/Dgt4esxQzn" target="_blank" rel="noopener noreferrer">
+                        <img src='/discord.png' alt="Discord" />
                     </a>
                 </div>
                 <div className="footer-section">
                     <p>Special Thanks to Our Sponsors</p>
-                    <img src={fanFanImg} alt="Sponsor 1" />
-                    <img src={monocerosImg} alt="Sponsor 2" />
+                    <img src='/fanfan.png' alt="Sponsor 1" />
+                    <img src='/monoceros1.png' alt="Sponsor 2" />
                 </div>
             </div>
             

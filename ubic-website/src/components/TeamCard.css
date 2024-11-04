@@ -1,4 +1,4 @@
-.event-card {
+.team-card {
     background-color: #f0f0f0;
     padding: 16px;
     border-radius: 8px;
@@ -7,12 +7,16 @@
     
 }
 
-.event-card h2 {
+.team-card img {
+    object-fit: contain;
+}
+
+.team-card h3 {
     margin: 0;
     font-size: 24px;
 }
 
-.event-card p {
+.team-card p {
     margin: 4px 0;
     font-size: 16px;
 }
@@ -20,7 +24,7 @@
 
 
 /* Hover effect */
-.event-card:hover {
+.team-card:hover {
     transform: translateY(-5px); /* Slightly raise the card */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
