@@ -1,14 +1,12 @@
 import React from 'react';
 import './Hero.css';
-import heroIMG from './sunset-cliff-san-diego.png'
-import heroIMG1 from './torrySunset.png'
 
-const Hero = ({size}) => {
+const Hero = ({size, title}) => {
     return (        
         <section className={`hero${size}`}>
-            <img src={heroIMG1} alt="Hero background" className="hero-background" />
+            <img src='/torrySunset.png' alt="Hero background" className="hero-background" />
             <div className="hero-text">
-                <h2>Connect. Innovate. Create. Learn.</h2>
+                <h2>{title}</h2>
             </div>
         </section>
     );

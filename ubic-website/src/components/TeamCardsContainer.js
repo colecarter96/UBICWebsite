@@ -1,22 +1,18 @@
-// EventCardsContainer.js
 import React from 'react';
-import EventCard from './TeamCard';
-import './TeamCardsContainer.css'
+import TeamCard from './TeamCard';
+import './TeamCardsContainer.css';
 
-const TeamCardsContainer = ({ tea, title, limit }) => {
-    // Limit the number of events if the `limit` prop is provided
-    const displayedEvents = limit ? events.slice(0, limit) : events;
+const TeamCardsContainer = ({ members, title, limit }) => {
+    const displayedEvents = limit ? members.slice(0, limit) : members;
 
     return (
         <div className="team-cards-container">
             <h3>{title}</h3>
-            <div className='cards-container'>
-                {displayedEvents.map((event, index) => (
-                    <EventCard key={index} title={event.title} date={event.date} description={event.description} />
+            <div className="cards-container">
+                {displayedEvents.map((member, index) => (
+                    <TeamCard key={index} img={member.img} name={member.name} position={member.position} />
                 ))}
             </div>
-            
-            
         </div>
     );
 };
