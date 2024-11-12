@@ -19,9 +19,9 @@
 
 .header nav ul {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     list-style-type: none;
-    padding-right: 5rem;
+    padding-right: 4rem;
     color: black;
 }
 

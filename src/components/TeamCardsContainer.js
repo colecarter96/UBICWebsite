@@ -5,7 +5,7 @@ import './TeamCardsContainer.css';
 const TeamCardsContainer = ({ members, title, limit }) => {
     const displayedEvents = limit ? members.slice(0, limit) : members;
 
-    return (
+    return (    
         <div className="team-cards-container">
             <h3>{title}</h3>
             <div className="cards-container">
