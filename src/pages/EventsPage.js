@@ -24,8 +24,8 @@ const EventsPage = () => {
 
     return (
         <div className="events-page">
-            <Header />
-            <Hero size="small" title='Connect. Innovate. Create. Learn.'/>
+            <Header alwaysBackground={true}/>
+            {/* <Hero size="small" title='Connect. Innovate. Create. Learn.'/> */}
             <EventCardsContainer events={events} title={"Events this Quarter"}/>
 
             <Footer />
