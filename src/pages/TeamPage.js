@@ -36,7 +36,7 @@ const TeamPage = () => {
       }, {});
 
       // Combine executive members at the top, followed by other grouped positions
-      setPositionGroups({ "Executive": executiveMembers, ...groupedByPosition });
+      setPositionGroups({ "Executive Board": executiveMembers, ...groupedByPosition });
     };
 
     fetchMembers();

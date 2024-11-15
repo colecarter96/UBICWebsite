@@ -4,7 +4,7 @@ import './AboutSection.css';
 function AboutSection() {
     return (
         <section className="about-section">
-            <h3>The Undergraduate Bioinformatics Club</h3>
+            <h3>Connect. Create. Learn. Innovate.</h3>
             <p>
                 Founded in 2012, this is a place for students who are interested in Bioinformatics to spread their wings.
                 We offer everything from small social events to our big GBMs. From learning about research, to research opportunities,

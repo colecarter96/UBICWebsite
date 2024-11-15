@@ -25,7 +25,7 @@ const HomePage = () => {
     return (
         <div className="home-page">
             <Header />
-            <Hero size="large" title='Connect. Innovate. Create. Learn.'/>
+            <Hero size="large" title='The Undergraduate Bioinformatics Club'/>
             
             <div className='main-content'>
                 <AboutSection />
