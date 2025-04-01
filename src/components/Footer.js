@@ -9,6 +9,7 @@ function Footer() {
                 <div className="footer-section">
                     <p>Contact Us</p>
                     <p>ubic@ucsd.edu</p>
+                    <a href="https://linktr.ee/ubic_ucsd?fbclid=PAZXh0bgNhZW0CMTEAAaZ8faMPmmRAiqd5e_xc-adjjHS-jyhX-_HPNpISt_SmrrhdPoJnG1x2mLY_aem_e2KImZgOMJKHuXiGcvvdkA">LinkTree</a>
                 </div>
                 <div className="footer-section">
                     <p>Join the Community</p>

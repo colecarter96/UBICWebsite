@@ -15,9 +15,9 @@
 .involvement-section {
     margin-bottom: 4rem;
     padding: 2rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* background-color: white; */
+    /* border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 h2 {
@@ -27,6 +27,12 @@ h2 {
 }
 
 p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+a {
     color: #666;
     line-height: 1.6;
     font-size: 1.1rem;
@@ -63,7 +69,8 @@ p {
 }
 
 .discord-link,
-.instagram-link {
+.instagram-link,
+.linktree-link {
     display: inline-block;
     padding: 0.5rem 1rem;
     background-color: #333;
@@ -118,9 +125,50 @@ p {
     .involvement-section,
     .contact-card {
         padding: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     h2 {
         font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .contact-methods {
+        gap: 1rem;
+    }
+
+    .contact-card {
+        padding: 1.5rem;
+    }
+
+    .involvement-grid {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content {
+        padding-top: 5rem;
+    }
+
+    .contact-section,
+    .involvement-section,
+    .contact-card {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .contact-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .involvement-card h3 {
+        font-size: 1.2rem;
     }
 } 

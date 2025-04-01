@@ -73,9 +73,42 @@ p {
     .mission-section,
     .values-section {
         padding: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     h2 {
         font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .values-grid {
+        gap: 1rem;
+    }
+
+    .value-card {
+        padding: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content {
+        padding-top: 5rem;
+    }
+
+    .about-section,
+    .mission-section,
+    .values-section {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .value-card h3 {
+        font-size: 1.2rem;
     }
 } 

@@ -19,6 +19,9 @@ const ContactPage = () => {
                     <div className="contact-card">
                         <h3>Email</h3>
                         <p>ubic@ucsd.edu</p>
+                        <a href="https://linktr.ee/ubic_ucsd?fbclid=PAZXh0bgNhZW0CMTEAAaZ8faMPmmRAiqd5e_xc-adjjHS-jyhX-_HPNpISt_SmrrhdPoJnG1x2mLY_aem_e2KImZgOMJKHuXiGcvvdkA" target="_blank" rel="noopener noreferrer" className="linktree-link">
+                            LinkTree
+                        </a>
                     </div>
                     <div className="contact-card">
                         <h3>Discord</h3>
@@ -30,8 +33,8 @@ const ContactPage = () => {
                     <div className="contact-card">
                         <h3>Instagram</h3>
                         <p>Follow us for updates and event announcements</p>
-                        <a href="https://instagram.com/ubic.ucsd" target="_blank" rel="noopener noreferrer" className="instagram-link">
-                            @ubic.ucsd
+                        <a href="https://www.instagram.com/ucsd_bioinformatics/?hl=en" target="_blank" rel="noopener noreferrer" className="instagram-link">
+                            @ucsd_bioinformatics
                         </a>
                     </div>
                 </section>

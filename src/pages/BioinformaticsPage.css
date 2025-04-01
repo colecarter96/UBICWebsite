@@ -85,9 +85,49 @@ p {
     .skills-section,
     .resources-section {
         padding: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     h2 {
         font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .applications-grid,
+    .skills-grid,
+    .resources-grid {
+        gap: 1rem;
+    }
+
+    .application-card,
+    .skill-card,
+    .resource-card {
+        padding: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content {
+        padding-top: 5rem;
+    }
+
+    .intro-section,
+    .applications-section,
+    .skills-section,
+    .resources-section {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .application-card h3,
+    .skill-card h3,
+    .resource-card h3 {
+        font-size: 1.2rem;
     }
 } 
