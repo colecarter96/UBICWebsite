@@ -2,7 +2,7 @@
     position: relative;
     
     width: 100%;
-    color: #FAF9F6;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,7 @@
     position: relative;
     
     width: 100%;
-    color: #FAF9F6;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +26,7 @@
     position: relative;
     
     width: 100%;
-    color: #FAF9F6;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,5 +52,28 @@
     text-align: center;
    
     transform: translateY(-90%);
-    
+    color: white;
+    padding: 0 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 2rem;
+        transform: translateY(-80%);
+    }
+
+    .herosmall {
+        height: 25vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-text h2 {
+        font-size: 1.8rem;
+        transform: translateY(-70%);
+    }
+
+    .herosmall {
+        height: 20vh;
+    }
 }
