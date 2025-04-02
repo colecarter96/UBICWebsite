@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 import Header from '../components/Header';
-import Hero from '../components/Hero';
+// import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 import TeamCardsContainer from '../components/TeamCardsContainer';
 import './TeamPage.css';
