@@ -48,9 +48,9 @@ function Header({ alwaysBackground }) {
                     <Link to='/bioinformatics' className="myLink" onClick={() => setIsMobileMenuOpen(false)}>
                         <li>Bioinformatics</li>
                     </Link>
-                    <Link to='/events' className="myLink" onClick={() => setIsMobileMenuOpen(false)}>
+                    {/* <Link to='/events' className="myLink" onClick={() => setIsMobileMenuOpen(false)}>
                         <li>Events</li>
-                    </Link>
+                    </Link> */}
                     <Link to='/team' className="myLink" onClick={() => setIsMobileMenuOpen(false)}>
                         <li>Team</li>
                     </Link>

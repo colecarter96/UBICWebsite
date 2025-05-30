@@ -29,10 +29,10 @@ const HomePage = () => {
             
             <div className='main-content'>
                 <AboutSection />
-                <div className='events'>
+                {/* <div className='events'>
                     <EventCardsContainer events={upcomingEvents} title={"Upcoming Events"} />
-                </div>
-                <NewsletterSection />  
+                </div> */}
+                {/* <NewsletterSection />   */}
             </div>
             
              

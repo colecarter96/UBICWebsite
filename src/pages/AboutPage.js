@@ -8,13 +8,14 @@ const AboutPage = () => {
         <div className="about-page">
             <Header alwaysBackground={true} />
             <div className="content">
-                <section className="about-section">
+                <section className="background-section">
                     <h2>About UBIC</h2>
                     <p>
-                        Founded in 2012, the Undergraduate Bioinformatics Club (UBIC) at UCSD is a student-led organization 
+                        Founded in 2012, the Undergraduate Bioinformatics Club (UBIC) at UCSD is a student-led organization
                         dedicated to fostering a community of students passionate about bioinformatics and computational biology.
                     </p>
                 </section>
+                
 
                 <section className="mission-section">
                     <h2>Our Mission</h2>

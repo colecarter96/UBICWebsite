@@ -36,6 +36,14 @@ const BioinformaticsPage = () => {
                             <h3>Disease Research</h3>
                             <p>Understanding disease mechanisms and treatments</p>
                         </div>
+                        <div className="application-card">
+                            <h3>Other Biotech</h3>
+                            <p>Biotech applications of bioinformatics</p>
+                        </div>
+                        <div className="application-card">
+                            <h3>Data Visualization</h3>
+                            <p>Graphing and displaying bioinformatics data</p>
+                        </div>
                     </div>
                 </section>
 
@@ -44,7 +52,7 @@ const BioinformaticsPage = () => {
                     <div className="skills-grid">
                         <div className="skill-card">
                             <h3>Programming</h3>
-                            <p>Python, R, and other programming languages</p>
+                            <p>Python, R, C++, and other programming languages</p>
                         </div>
                         <div className="skill-card">
                             <h3>Data Analysis</h3>
@@ -61,27 +69,7 @@ const BioinformaticsPage = () => {
                     </div>
                 </section>
 
-                <section className="resources-section">
-                    <h2>Learning Resources</h2>
-                    <div className="resources-grid">
-                        <div className="resource-card">
-                            <h3>Online Courses</h3>
-                            <p>Coursera, edX, and other platforms</p>
-                        </div>
-                        <div className="resource-card">
-                            <h3>Tools & Software</h3>
-                            <p>BLAST, RStudio, Python libraries</p>
-                        </div>
-                        <div className="resource-card">
-                            <h3>Research Papers</h3>
-                            <p>Scientific journals and databases</p>
-                        </div>
-                        <div className="resource-card">
-                            <h3>Community</h3>
-                            <p>Forums, conferences, and workshops</p>
-                        </div>
-                    </div>
-                </section>
+                
             </div>
             <Footer />
         </div>
