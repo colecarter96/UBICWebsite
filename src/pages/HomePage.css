@@ -21,6 +21,7 @@ h1 {
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-bottom: 2rem;
 }
 
 .background-section,
@@ -45,6 +46,12 @@ p {
   line-height: 1.6;
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin: 1rem 0rem;
 }
 
 .centered-paragraph {

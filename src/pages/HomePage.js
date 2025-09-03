@@ -256,9 +256,9 @@ const HomePage = () => {
             </div>
           </section>
           <section ref={eventsRef} id="events">
-            <div className="events-flexbox">
-              <h1>Events</h1>
-              <div className="innerContact">
+            <h1>Events</h1>
+            <div className="contact-methods">
+              <div className="contact-card">
                 <img src="/camping.svg" alt="camping" width="200px"></img>
                 <div>
                   <h2> BIOINFORMATICS BOOTCAMP </h2>
@@ -275,7 +275,7 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <div className="innerContact">
+              <div className="contact-card">
                 <img src="/chalk_talk.svg" alt="chalk_talk" width="200px"></img>
                 <div>
                   <h2> CHALK TALKS </h2>
@@ -291,7 +291,7 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <div className="innerContact">
+              <div className="contact-card">
                 <img src="/socials.svg" alt="socials" width="200px"></img>
                 <div>
                   <h2> SOCIALS </h2>
@@ -304,7 +304,7 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <div className="innerContact">
+              <div className="contact-card">
                 <img
                   src="/mentor_mentee.svg"
                   alt="mentor-mentee"
@@ -321,7 +321,7 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <div className="innerContact">
+              <div className="contact-card">
                 <img
                   src="/conference_speaker.svg"
                   alt="conference"
@@ -343,7 +343,23 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          <section ref={faqRef} id="faq"></section>
+          <section ref={faqRef} id="faq">
+            <h1>FAQ</h1>
+            <h3>Is attendance mandatory?</h3>
+            <p> No, but attend all events that you are interested in!</p>
+            <h3>What is the best way to stay updated about events?</h3>{" "}
+            <p>
+              Instagram, Weekly Newsletters, Discord Announcements, and this
+              website.
+            </p>
+            <h3> How often are there events held?</h3> <p>3-5 times a month.</p>
+            <h3> Do we offer coding/bioinformatics tutorials</h3> <p> Yes!</p>
+            <h3> Research/Industry opportunities</h3>{" "}
+            <p>
+              Join the discord #opportunities channel, or check the Resources
+              tab above.
+            </p>
+          </section>
         </div>
       </div>
 
