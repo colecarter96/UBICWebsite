@@ -118,7 +118,7 @@ const HomePage = () => {
         if (ref.current) observer.unobserve(ref.current);
       });
     };
-  }, []);
+  });
 
   return (
     <div className="home-page">
