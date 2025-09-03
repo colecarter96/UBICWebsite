@@ -23,14 +23,20 @@ const HomePage = () => {
   // Observer for section scrolled down to
   const aboutRef = useRef(null);
   const eventsRef = useRef(null);
+  const merchRef = useRef(null);
+  const resourcesRef = useRef(null);
   const faqRef = useRef(null);
+  const teamRef = useRef(null);
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const sectionRefs = [
       { id: "about", ref: aboutRef },
       { id: "events", ref: eventsRef },
+      { id: "merch", ref: merchRef },
+      { id: "resources", ref: resourcesRef },
       { id: "faq", ref: faqRef },
+      { id: "team", ref: teamRef },
     ];
 
     const observer = new IntersectionObserver(
@@ -68,8 +74,8 @@ const HomePage = () => {
       <Carousel />
 
       <div className="main-content">
-        <div ref={aboutRef} id="about" className="about-content">
-          <section className="background-section">
+        <div className="about-content">
+          <section ref={aboutRef} id="about" className="background-section">
             <div className="bottom-underline">
               <h1>About Us</h1>
             </div>
@@ -106,7 +112,7 @@ const HomePage = () => {
               <div className="innerContact">
                 <img src="/mail_black.svg" alt="mail_logo" height="40px"></img>
                 <a
-                  href="https://linktr.ee/ubic_ucsd?fbclid=PAZXh0bgNhZW0CMTEAAaZ8faMPmmRAiqd5e_xc-adjjHS-jyhX-_HPNpISt_SmrrhdPoJnG1x2mLY_aem_e2KImZgOMJKHuXiGcvvdkA"
+                  href="mailto:ubic@ucsd.edu"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="linktree-link"
@@ -203,7 +209,7 @@ const HomePage = () => {
                 <div className="skills-grid">
                   <div className="skill-card">
                     <h3>Programming</h3>
-                    <p>Python, R, C++, and other programming languages</p>
+                    <p>Command line, Python, R, C++, and more</p>
                   </div>
                   <div className="skill-card">
                     <h3>Data Analysis</h3>
@@ -259,40 +265,36 @@ const HomePage = () => {
             <h1>Events</h1>
             <div className="contact-methods">
               <div className="contact-card">
-                <img src="/camping.svg" alt="camping" width="200px"></img>
+                <img src="/camping.svg" alt="camping" height="150px"></img>
                 <div>
-                  <h2> BIOINFORMATICS BOOTCAMP </h2>
+                  <h2> WORKSHOPS </h2>
                   <p>
                     A year-long introductory sequence of lessons to introduce
-                    new bioinformaticians to lab-applicable technical skills.
-                    For years, it has served as students’ earliest exposure to
-                    bioinformatics at UC San Diego. Visit{" "}
-                    <a href="https://www.bioinformaticscrashcourse.com">
-                      bioinformaticscrashcourse.com
-                    </a>{" "}
-                    to check out our lessons!
+                    new bioinformaticians to lab-applicable technical skills,
+                    led by UBIC board members.
                   </p>
                 </div>
               </div>
 
               <div className="contact-card">
-                <img src="/chalk_talk.svg" alt="chalk_talk" width="200px"></img>
+                <img
+                  src="/chalk_talk.svg"
+                  alt="chalk_talk"
+                  height="150px"
+                ></img>
                 <div>
                   <h2> CHALK TALKS </h2>
                   <p>
-                    The aim of Chalk Talk is to introduce students to the
-                    vibrant bioinformatics research community on campus.
-                    Professors from various fields are invited every talk to
-                    introduce their research focus. This would be a great
-                    opportunity to keep up with the rapid advances of the field
-                    and meet your next mentor!
+                    Professors from various fields are invited every chalk talk
+                    to detail their research focus. Explore the vibrant
+                    bioinformatics research community on campus and network with
+                    UCSD professors!
                   </p>
-                  <p>Time: Biweekly starting fall</p>
                 </div>
               </div>
 
               <div className="contact-card">
-                <img src="/socials.svg" alt="socials" width="200px"></img>
+                <img src="/socials.svg" alt="socials" height="150px"></img>
                 <div>
                   <h2> SOCIALS </h2>
                   <p>
@@ -308,15 +310,14 @@ const HomePage = () => {
                 <img
                   src="/mentor_mentee.svg"
                   alt="mentor-mentee"
-                  width="200px"
+                  height="150px"
                 ></img>
                 <div>
                   <h2> MENTOR-MENTEE PROGRAM </h2>
                   <p>
-                    Our mentorship program is designed to provide mentees
-                    guidance from their mentors to help achieve the mentees'
-                    goals. We hope to get you prepared for a future career path
-                    and research opportunities with our experience.
+                    Our mentorship program pairs together undergraduates of
+                    varying experience levels. Join as a mentor or mentee to
+                    gain valuable peer guidance and leadership opportunities!
                   </p>
                 </div>
               </div>
@@ -325,23 +326,49 @@ const HomePage = () => {
                 <img
                   src="/conference_speaker.svg"
                   alt="conference"
-                  width="200px"
+                  height="150px"
                 ></img>
                 <div>
-                  <h2> SOUTHWESTERN BIOINFORMATICS CONFERENCE </h2>
+                  <h2> INDUSTRY PANELS </h2>
                   <p>
-                    Southwestern Bioinformatics Conference(SBC) is a two-day
-                    event containing opportunities like research talks from
-                    faculties, graduate showcase, networking luncheon and
-                    industry panels. Our goal is to foster knowledge and
-                    collaboration among bioinformatics research groups in the
-                    southwest and to build connections between scientists in
-                    this region.
+                    Industry professionals and UCSD alumni at companies such as
+                    Illumina, Myriad Genetics, and Exact Sciences are invited to
+                    share their experiences and talk with students. Get the
+                    opportunity to network with industry professionals!
                   </p>
-                  <p>Time: Early April every year</p>
+                </div>
+              </div>
+
+              <div className="contact-card">
+                <img
+                  src="/conference_speaker.svg"
+                  alt="conference"
+                  height="150px"
+                ></img>
+                <div>
+                  <h2> COMMUNITY SERVICE </h2>
+                  <p>
+                    Check out how to give back to the community, from
+                    volunteering at food banks to writing supportive messages.
+                  </p>
                 </div>
               </div>
             </div>
+          </section>
+          <section ref={merchRef} id="merch">
+            <h1>Merch</h1>
+            <p>
+              UBIC merch photos Status on inventory Google forms to fill out for
+              the merch
+            </p>
+          </section>
+          <section ref={resourcesRef} id="resources">
+            <h1>Resources</h1>
+            <ul>
+              <li>Industry Contact</li>
+              <li>Professor Contact</li>
+              <li>UCSD Classes resources</li>
+            </ul>
           </section>
           <section ref={faqRef} id="faq">
             <h1>FAQ</h1>
@@ -349,16 +376,30 @@ const HomePage = () => {
             <p> No, but attend all events that you are interested in!</p>
             <h3>What is the best way to stay updated about events?</h3>{" "}
             <p>
-              Instagram, Weekly Newsletters, Discord Announcements, and this
-              website.
+              Instagram, Weekly Newsletters, Discord Announcements, and the
+              Events tab above.
             </p>
-            <h3> How often are there events held?</h3> <p>3-5 times a month.</p>
-            <h3> Do we offer coding/bioinformatics tutorials</h3> <p> Yes!</p>
-            <h3> Research/Industry opportunities</h3>{" "}
+            <h3> How often are events held?</h3> <p>3-5 times a month.</p>
+            <h3> Do we offer coding/bioinformatics tutorials?</h3>{" "}
             <p>
-              Join the discord #opportunities channel, or check the Resources
+              {" "}
+              Yes, make sure to attend our workshops! Also visit{" "}
+              <a href="https://www.bioinformaticscrashcourse.com">
+                bioinformaticscrashcourse.com
+              </a>{" "}
+              for an online tutorial created by UBIC alumni.
+            </p>
+            <h3>
+              {" "}
+              How do I stay updated on research and industry opportunities?
+            </h3>{" "}
+            <p>
+              Join the discord #opportunities channel, and check the Resources
               tab above.
             </p>
+          </section>
+          <section ref={teamRef} id="team">
+            <h1>Team</h1>
           </section>
         </div>
       </div>

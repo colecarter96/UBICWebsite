@@ -65,26 +65,26 @@ function Header({ alwaysBackground, activeSection }) {
             </a>
           </li>
           <li>
-            <Link
-              to="/merch"
-              className="myLink"
+            <a
+              href="#merch"
+              className={activeSection === "merch" ? "active" : "myLink"}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <li>Merch</li>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/resources"
-              className="myLink"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <li>Resources</li>
-            </Link>
+            </a>
           </li>
           <li>
             <a
-              href="/faq"
+              href="#resources"
+              className={activeSection === "resources" ? "active" : "myLink"}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <li>Resources</li>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#faq"
               className={activeSection === "faq" ? "active" : "myLink"}
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -92,13 +92,13 @@ function Header({ alwaysBackground, activeSection }) {
             </a>
           </li>
           <li>
-            <Link
-              to="/team"
-              className="myLink"
+            <a
+              href="#team"
+              className={activeSection === "team" ? "active" : "myLink"}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <li>Team</li>
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>
