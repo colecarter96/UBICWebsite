@@ -261,8 +261,11 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          <section ref={eventsRef} id="events">
-            <h1>Events</h1>
+          <section ref={eventsRef} id="events" className="background-section">
+            <div className="bottom-underline">
+              <h1>Events</h1>
+            </div>
+
             <div className="contact-methods">
               <div className="contact-card">
                 <img src="/camping.svg" alt="camping" height="150px"></img>
@@ -355,23 +358,33 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          <section ref={merchRef} id="merch">
-            <h1>Merch</h1>
+          <section ref={merchRef} id="merch" className="background-section">
+            <div className="bottom-underline">
+              <h1>Merch</h1>
+            </div>
             <p>
               UBIC merch photos Status on inventory Google forms to fill out for
               the merch
             </p>
           </section>
-          <section ref={resourcesRef} id="resources">
-            <h1>Resources</h1>
+          <section
+            ref={resourcesRef}
+            id="resources"
+            className="background-section"
+          >
+            <div className="bottom-underline">
+              <h1>Resources</h1>
+            </div>
             <ul>
               <li>Industry Contact</li>
               <li>Professor Contact</li>
               <li>UCSD Classes resources</li>
             </ul>
           </section>
-          <section ref={faqRef} id="faq">
-            <h1>FAQ</h1>
+          <section ref={faqRef} id="faq" className="background-section">
+            <div className="bottom-underline">
+              <h1>FAQ</h1>
+            </div>
             <h3>Is attendance mandatory?</h3>
             <p> No, but attend all events that you are interested in!</p>
             <h3>What is the best way to stay updated about events?</h3>{" "}
@@ -398,8 +411,10 @@ const HomePage = () => {
               tab above.
             </p>
           </section>
-          <section ref={teamRef} id="team">
-            <h1>Team</h1>
+          <section ref={teamRef} id="team" className="background-section">
+            <div className="bottom-underline">
+              <h1>Team</h1>
+            </div>
           </section>
         </div>
       </div>
