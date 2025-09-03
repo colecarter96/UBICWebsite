@@ -96,9 +96,10 @@ const HomePage = () => {
               (section) => section.ref.current === entry.target
             );
             if (matched) {
-              setActiveSection(matched.id);
               if (matched.id === "team" && !teamLoaded) {
                 fetchMembers(); // Fetch from Firebase here
+              } else {
+                setActiveSection(matched.id);
               }
             }
           }
@@ -121,13 +122,15 @@ const HomePage = () => {
       }
     });
 
-    if (teamRef.current) resizeObserver.observe(teamRef.current);
+    const currentElement = teamRef.current;
+    if (currentElement) resizeObserver.observe(teamRef.current);
 
     return () => {
       sectionRefs.forEach(({ ref }) => {
         if (ref.current) observer.unobserve(ref.current);
       });
-      if (teamRef.current) resizeObserver.unobserve(teamRef.current);
+
+      if (currentElement) resizeObserver.unobserve(currentElement);
     };
   }, [teamLoaded]);
 
@@ -425,10 +428,7 @@ const HomePage = () => {
             <div className="bottom-underline">
               <h1>Merch</h1>
             </div>
-            <p>
-              UBIC merch photos Status on inventory Google forms to fill out for
-              the merch
-            </p>
+            <h3 style={{}}>Coming Soon!</h3>
           </section>
           <section
             ref={resourcesRef}
@@ -438,11 +438,7 @@ const HomePage = () => {
             <div className="bottom-underline">
               <h1>Resources</h1>
             </div>
-            <ul>
-              <li>Industry Contact</li>
-              <li>Professor Contact</li>
-              <li>UCSD Classes resources</li>
-            </ul>
+            <h3>Coming Soon!</h3>
           </section>
           <section ref={faqRef} id="faq" className="background-section">
             <div className="bottom-underline">
