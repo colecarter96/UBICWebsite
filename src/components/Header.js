@@ -34,7 +34,15 @@ function Header({ alwaysBackground, activeSection }) {
         alwaysBackground ? "home-fade" : ""
       }`}
     >
-      <Link to="/" style={{ margin: "0", position: "relative", top: "5px" }}>
+      <Link
+        to="/"
+        style={{
+          margin: "0",
+          position: "relative",
+          top: "0.4rem",
+          left: "4rem",
+        }}
+      >
         <img src="/ubicLogo.png" alt="logo" width="120px"></img>
       </Link>
 

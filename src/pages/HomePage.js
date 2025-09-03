@@ -105,7 +105,7 @@ const HomePage = () => {
         });
       },
       {
-        threshold: 0.3, // 30% of section must be visible
+        threshold: 0.3, // 20% of section must be visible
       }
     );
 
@@ -113,12 +113,23 @@ const HomePage = () => {
       if (ref.current) observer.observe(ref.current);
     });
 
+    // Watch for resize changes in the team section, after it's lazy loaded
+    const resizeObserver = new ResizeObserver(() => {
+      if (teamRef.current) {
+        observer.unobserve(teamRef.current);
+        observer.observe(teamRef.current);
+      }
+    });
+
+    if (teamRef.current) resizeObserver.observe(teamRef.current);
+
     return () => {
       sectionRefs.forEach(({ ref }) => {
         if (ref.current) observer.unobserve(ref.current);
       });
+      if (teamRef.current) resizeObserver.unobserve(teamRef.current);
     };
-  });
+  }, [teamLoaded]);
 
   return (
     <div className="home-page">
