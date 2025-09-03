@@ -1,6 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
 import Header from "../components/Header";
 import Carousel from "../components/ImageCarousel/Slider";
+import TeamCardsContainer from "../components/TeamCardsContainer";
 import Footer from "../components/Footer";
 import "./HomePage.css";
 
@@ -20,7 +23,7 @@ const HomePage = () => {
   //     .sort((a, b) => new Date(a.date) - new Date(b.date)) // Sort by date in ascending order
   //     .slice(0, 3); // Limit to 3 upcoming events
 
-  // Observer for section scrolled down to
+  // Observers for section scrolled down to
   const aboutRef = useRef(null);
   const eventsRef = useRef(null);
   const merchRef = useRef(null);
@@ -28,6 +31,52 @@ const HomePage = () => {
   const faqRef = useRef(null);
   const teamRef = useRef(null);
   const [activeSection, setActiveSection] = useState("");
+  // Lazy Load for Team
+  const [teamLoaded, setTeamLoaded] = useState(false);
+  const [positionGroups, setPositionGroups] = useState({});
+
+  const fetchMembers = async () => {
+    const querySnapshot = await getDocs(collection(db, "teamMembers"));
+    const membersData = querySnapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+
+    // Define specific ordering for Executive positions
+    const executiveOrder = [
+      "President",
+      "VP Internal",
+      "VP External",
+      "VP Finance",
+    ];
+
+    // Separate Executive members and sort them by the defined order
+    const executiveMembers = membersData
+      .filter((member) => executiveOrder.includes(member.position))
+      .sort(
+        (a, b) =>
+          executiveOrder.indexOf(a.position) -
+          executiveOrder.indexOf(b.position)
+      );
+
+    // Separate non-executive members and group them by position without ordering
+    const otherMembers = membersData.filter(
+      (member) => !executiveOrder.includes(member.position)
+    );
+    const groupedByPosition = otherMembers.reduce((acc, member) => {
+      const position = member.position || "Other"; // Use "Other" for missing positions
+      if (!acc[position]) acc[position] = [];
+      acc[position].push(member);
+      return acc;
+    }, {});
+
+    // Combine executive members at the top, followed by other grouped positions
+    setPositionGroups({
+      "Executive Board": executiveMembers,
+      ...groupedByPosition,
+    });
+    setTeamLoaded(true);
+  };
 
   useEffect(() => {
     const sectionRefs = [
@@ -48,6 +97,9 @@ const HomePage = () => {
             );
             if (matched) {
               setActiveSection(matched.id);
+              if (matched.id === "team" && !teamLoaded) {
+                fetchMembers(); // Fetch from Firebase here
+              }
             }
           }
         });
@@ -415,6 +467,19 @@ const HomePage = () => {
             <div className="bottom-underline">
               <h1>Team</h1>
             </div>
+            {teamLoaded === true ? (
+              Object.keys(positionGroups).map((position) => (
+                <div key={position} className="position-section">
+                  {/* {position !== "Executive" && <h2>{position}</h2>} */}
+                  <TeamCardsContainer
+                    members={positionGroups[position]}
+                    title={position}
+                  />
+                </div>
+              ))
+            ) : (
+              <h3>Loading team...</h3>
+            )}
           </section>
         </div>
       </div>
