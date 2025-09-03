@@ -1,3 +1,9 @@
+# Credit
+
+Credit to https://iamdyroz.medium.com/create-a-responsive-react-carousel-image-slider-component-from-scratch-using-react-hooks-eefdcfd42d79 for React Carousel Image Slider tutorial.
+
+# REACT DOCUMENTATION
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

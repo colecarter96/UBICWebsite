@@ -1,25 +1,22 @@
 .about-section {
-    padding-bottom: 3rem;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #FAF9F6;
-    padding-top: 2rem;
-
+  padding-bottom: 3rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #faf9f6;
+  padding-top: 2rem;
 }
 
 .about-section h3 {
-    font-size: 1.7rem;
-    font-weight: normal;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .about-section p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    
-    
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }

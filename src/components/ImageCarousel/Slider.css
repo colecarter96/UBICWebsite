@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --heights: 85vh; /* Change Height of Carousel Here */
+  --widths: 100%;
+}
+
+slider-container {
+  height: var(--heights);
+  width: var(--widths);
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.active {
+  display: inline-block;
+}
+.inactive {
+  display: none;
+}
+
+.slides {
+  height: var(--heights);
+  width: var(--widths);
+  position: relative;
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.overlay-image {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.slide-title,
+.slide-text,
+.slide-text2 {
+  width: 100%;
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  z-index: 10;
+}
+.slide-text {
+  top: 60%; /* Change Position of Text Here */
+  width: 70%;
+  left: 15%;
+  font-size: 4.5vw;
+}
+.slide-text2 {
+  top: 85%; /* Change Position of Text Here */
+  font-size: 2.5vw;
+  font-weight: 400;
+}
+.prev,
+.next {
+  cursor: pointer;
+  user-select: none;
+  z-index: 50;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 1rem;
+  margin-top: -3rem;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: Ox 5px 5px 0px;
+  color: #2c3f50;
+}
+.prev:hover,
+.next:hover {
+  color: white;
+  background-color: rba(0, 0, 0, 0.6);
+  transition: all 0.5s ease-in;
+}
+.next {
+  right: 0;
+  border-radius: 5px Opx Opx 5px;
+}
+.all-dots {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  top: 80%; /* Change Location of Dots Here */
+  justify-content: center;
+  z-index: 50;
+}
+.dot {
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 2px 3px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  display: inline-block;
+}
+.active-dot,
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}

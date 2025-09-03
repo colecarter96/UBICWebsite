@@ -1,27 +1,31 @@
+.events-flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
 .event-card {
-    background-color: #f0f0f0;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    min-width: 200px; 
-    
+  background-color: #f0f0f0;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
 }
 
 .event-card h2 {
-    margin: 0;
-    font-size: 24px;
+  margin: 0;
+  font-size: 24px;
 }
 
 .event-card p {
-    margin: 4px 0;
-    font-size: 16px;
+  margin: 4px 0;
+  font-size: 16px;
 }
-
-
 
 /* Hover effect */
 .event-card:hover {
-    transform: translateY(-5px); /* Slightly raise the card */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: translateY(-5px); /* Slightly raise the card */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
-
