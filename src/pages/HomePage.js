@@ -1,8 +1,10 @@
 import { useRef, useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
+import AboutSection from "../components/AboutSection";
 import Header from "../components/Header";
 import Carousel from "../components/ImageCarousel/Slider";
+import EventCard from "../components/EventCard";
 import TeamCardsContainer from "../components/TeamCardsContainer";
 import Footer from "../components/Footer";
 import "./HomePage.css";
@@ -22,6 +24,7 @@ const HomePage = () => {
   // const upcomingEvents = events
   //     .sort((a, b) => new Date(a.date) - new Date(b.date)) // Sort by date in ascending order
   //     .slice(0, 3); // Limit to 3 upcoming events
+
   // Bioinformatics Section Open/Closed
   const [openBioinformatics, toggleBioinformatics] = useState(false);
 
@@ -142,92 +145,11 @@ const HomePage = () => {
       <Carousel />
 
       <div className="about-content">
+        {/* Section 1: About Us Section*/}
         <section ref={aboutRef} id="about" className="background-section">
-          <div className="bottom-underline">
-            <h1>About Us</h1>
-          </div>
-          <p className="centered-paragraph">
-            Founded in 2012, the Undergraduate Bioinformatics Club (UBIC) at
-            UCSD is a student-led organization dedicated to fostering a
-            community of students passionate about bioinformatics and
-            computational biology. This is a place for students who are
-            interested in bioinformatics to spread their wings. From research,
-            leadership, and networking opportunities to building friendships
-            that will last a lifetime, this is your place to grow!
-          </p>
+          <AboutSection></AboutSection>
         </section>
-
-        <div className="innerContact">
-          <a
-            href="https://linktr.ee/ubic_ucsd?fbclid=PAZXh0bgNhZW0CMTEAAaZ8faMPmmRAiqd5e_xc-adjjHS-jyhX-_HPNpISt_SmrrhdPoJnG1x2mLY_aem_e2KImZgOMJKHuXiGcvvdkA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="join-button"
-          >
-            Join Us
-            <img
-              src="/linktree_white.svg"
-              alt="linktree_logo"
-              height="35px"
-            ></img>
-          </a>
-        </div>
-        <section className="contact-methods">
-          <div className="contact-card">
-            <h3>Email</h3>
-            <p>Contact us at ubic@ucsd.edu</p>
-            <div className="innerContact">
-              <img src="/mail_black.svg" alt="mail_logo" height="40px"></img>
-              <a
-                href="mailto:ubic@ucsd.edu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="linktree-link"
-              >
-                ubic@ucsd.edu
-              </a>
-            </div>
-          </div>
-          <div className="contact-card">
-            <h3>Discord</h3>
-            <p>Join our Discord server to connect with other members!</p>
-            <div className="innerContact">
-              <img
-                src="/discord_black.svg"
-                alt="discord_logo"
-                height="40px"
-              ></img>
-              <a
-                href="https://discord.gg/Dgt4esxQzn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="discord-link"
-              >
-                Join Discord
-              </a>
-            </div>
-          </div>
-          <div className="contact-card">
-            <h3>Instagram</h3>
-            <p>Follow us for updates and event announcements</p>
-            <div className="innerContact">
-              <img
-                src="/instagram_black.svg"
-                alt="insta_logo"
-                height="40px"
-              ></img>
-              <a
-                href="https://www.instagram.com/ucsd_bioinformatics/?hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="instagram-link"
-              >
-                @ucsd_bioinformatics
-              </a>
-            </div>
-          </div>
-        </section>
-
+        {/* Section 1.1: Bioinformatics Section*/}
         <section className="intro-section">
           <div
             className="center-flex"
@@ -303,8 +225,8 @@ const HomePage = () => {
           )}
         </section>
 
+        {/* Section 1.2: Mission Section*/}
         <section className="background-section">
-          {/* <h2>Our Values</h2> */}
           <div className="centered-div">
             <h2 style={{ margin: "1.5rem auto" }}>Our Mission</h2>
             <p>
@@ -339,94 +261,66 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+
+        {/* Section 2: Events Section*/}
         <section ref={eventsRef} id="events" className="background-section">
           <div className="bottom-underline">
             <h1>Events</h1>
           </div>
 
           <div className="contact-methods">
-            <div className="contact-card">
-              <img src="/camping.svg" alt="camping" height="150px"></img>
-              <div>
-                <h2> WORKSHOPS </h2>
-                <p>
-                  A year-long introductory sequence of lessons to introduce new
-                  bioinformaticians to lab-applicable technical skills, led by
-                  UBIC board members.
-                </p>
-              </div>
-            </div>
+            <EventCard
+              imgsrc="/camping.svg"
+              title="WORKSHOPS"
+              description="A quarter-long sequence for both new and experienced
+                  bioinformaticians, from introductory Python lessons to
+                  challenging data analysis projects."
+            ></EventCard>
 
-            <div className="contact-card">
-              <img src="/chalk_talk.svg" alt="chalk_talk" height="150px"></img>
-              <div>
-                <h2> CHALK TALKS </h2>
-                <p>
-                  Professors from various fields are invited every chalk talk to
-                  detail their research focus. Explore the vibrant
+            <EventCard
+              imgsrc="/chalk_talk.svg"
+              title="CHALK TALKS"
+              description="Professors from various fields are invited every chalk talk to
+                  describe their research focus. Explore the vibrant
                   bioinformatics research community on campus and network with
-                  UCSD professors!
-                </p>
-              </div>
-            </div>
+                  UCSD professors!"
+            ></EventCard>
 
-            <div className="contact-card">
-              <img src="/socials.svg" alt="socials" height="150px"></img>
-              <div>
-                <h2> SOCIALS </h2>
-                <p>
-                  UBIC holds a variety of social events for students. These
+            <EventCard
+              imgsrc="/socials.svg"
+              title="SOCIALS"
+              description="UBIC holds a variety of social events for students. These
                   include bonfires, retreats, game nights, and more! Make sure
-                  to check our Discord and Instagram for upcoming social events.
-                </p>
-              </div>
-            </div>
+                  to check our Discord and Instagram for upcoming social events."
+            ></EventCard>
 
-            <div className="contact-card">
-              <img
-                src="/mentor_mentee.svg"
-                alt="mentor-mentee"
-                height="150px"
-              ></img>
-              <div>
-                <h2> MENTOR-MENTEE PROGRAM </h2>
-                <p>
-                  Our mentorship program pairs together undergraduates of
+            <EventCard
+              imgsrc="/mentor_mentee.svg"
+              title="MENTOR-MENTEE PROGRAM"
+              description="Our mentorship program pairs together undergraduates of
                   varying experience levels. Join as a mentor or mentee to gain
-                  valuable peer guidance and leadership opportunities!
-                </p>
-              </div>
-            </div>
+                  invaluable peer guidance and leadership opportunities."
+            ></EventCard>
 
-            <div className="contact-card">
-              <img
-                src="/conference_speaker.svg"
-                alt="conference"
-                height="150px"
-              ></img>
-              <div>
-                <h2> INDUSTRY PANELS </h2>
-                <p>
-                  Industry professionals and UCSD alumni at companies such as
-                  Illumina, Myriad Genetics, and Exact Sciences are invited to
-                  share their experiences and talk with students. Get the
-                  opportunity to network with industry professionals!
-                </p>
-              </div>
-            </div>
+            <EventCard
+              imgsrc="/conference_speaker.svg"
+              title="INDUSTRY PANELS"
+              description="Industry professionals and UCSD alumni at various biotech
+                  companies are invited to share their experiences and give
+                  advice. Get the opportunity to network with industry
+                  professionals!"
+            ></EventCard>
 
-            <div className="contact-card">
-              <img src="/puzzles.svg" alt="volunteer" height="150px"></img>
-              <div>
-                <h2> COMMUNITY SERVICE </h2>
-                <p>
-                  Check out how to give back to the community, from volunteering
-                  at food banks to writing supportive messages.
-                </p>
-              </div>
-            </div>
+            <EventCard
+              imgsrc="/puzzles.svg"
+              title="COMMUNITY SERVICE"
+              description="Participate in giving back to the community, from volunteering
+                  at food banks to writing supportive messages."
+            ></EventCard>
           </div>
         </section>
+
+        {/* Section 3: Merch Section*/}
         <section ref={merchRef} id="merch" className="background-section">
           <div className="bottom-underline">
             <h1>Merch</h1>
@@ -447,6 +341,8 @@ const HomePage = () => {
           </div>
           <h3 style={{ margin: "2rem auto" }}>Coming Soon!</h3>
         </section>
+
+        {/* Section 4: FAQ Section*/}
         <section ref={faqRef} id="faq" className="background-section">
           <div className="bottom-underline">
             <h1>FAQ</h1>
@@ -477,6 +373,8 @@ const HomePage = () => {
             above.
           </p>
         </section>
+
+        {/* Section 5: Team Section*/}
         <section ref={teamRef} id="team" className="background-section">
           <div className="bottom-underline">
             <h1>Team</h1>
