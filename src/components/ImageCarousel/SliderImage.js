@@ -2,9 +2,12 @@ const imageFilenames = [
   "titleSlide.svg",
   "UBIC_GBM.jpg",
   "sungod.jpg",
+  "bonfire2024.jpg",
   "bonfire.jpg",
+  "sungod2023.jpg",
   "foodBank.jpg",
-  "warren.jpg",
+  "gbm2025-2.jpg",
+  "gbm2025.jpg",
 ];
 
 const SliderImage = imageFilenames.map((filename, index) => ({

@@ -247,9 +247,9 @@ const HomePage = () => {
                 <p>
                   Bioinformatics is an interdisciplinary field that combines
                   biology, computer science, mathematics, and statistics to
-                  analyze and interpret biological data. It plays a crucial role
-                  in understanding complex biological systems and advancing
-                  medical research.
+                  analyze and interpret biological data. It is crucial to
+                  understanding complex biological systems and advancing medical
+                  research.
                 </p>
 
                 <h2>Applications</h2>
@@ -433,6 +433,10 @@ const HomePage = () => {
             <h1>Merch</h1>
           </div>
           <h3 style={{}}>Coming Soon!</h3>
+          <div classname="center-flex">
+            <img src="/shirts2023.jpg" alt="tshirts" width="400px"></img>
+            <img src="/shirts2025.jpg" alt="tshirts2" width="400px"></img>
+          </div>
         </section>
         <section
           ref={resourcesRef}
