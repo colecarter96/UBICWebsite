@@ -1,7 +1,6 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
-import Arrows from "../components/ImageCarousel/Arrows";
 import Header from "../components/Header";
 import Carousel from "../components/ImageCarousel/Slider";
 import TeamCardsContainer from "../components/TeamCardsContainer";
@@ -432,8 +431,8 @@ const HomePage = () => {
           <div className="bottom-underline">
             <h1>Merch</h1>
           </div>
-          <h3 style={{}}>Coming Soon!</h3>
-          <div classname="center-flex">
+          <h3 style={{ margin: "2rem auto" }}>Coming Soon!</h3>
+          <div className="center-flex">
             <img src="/shirts2023.jpg" alt="tshirts" width="400px"></img>
             <img src="/shirts2025.jpg" alt="tshirts2" width="400px"></img>
           </div>
@@ -446,7 +445,7 @@ const HomePage = () => {
           <div className="bottom-underline">
             <h1>Resources</h1>
           </div>
-          <h3>Coming Soon!</h3>
+          <h3 style={{ margin: "2rem auto" }}>Coming Soon!</h3>
         </section>
         <section ref={faqRef} id="faq" className="background-section">
           <div className="bottom-underline">
