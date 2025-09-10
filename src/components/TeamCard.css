@@ -1,7 +1,7 @@
 .team-card {
   position: relative;
   background-color: white;
-  padding: 1.5rem;
+  padding: 0.8rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -17,15 +17,15 @@
 }
 
 .team-card img {
-  width: 160px; /* Larger size */
-  height: 150px; /* Keep height same as width for square shape */
+  width: 170px; /* Larger size */
+  height: 170px; /* Keep height same as width for square shape */
   object-fit: cover; /* Ensures image covers the area */
   border-radius: 16px; /* Slightly rounded corners for a softer look */
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .team-card h3 {
-  margin: 0.5rem 0;
+  margin: 0;
   font-size: 24px;
   color: #333;
 }
@@ -37,7 +37,7 @@
 }
 
 .team-card h2 {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 500;
   color: white;
 }

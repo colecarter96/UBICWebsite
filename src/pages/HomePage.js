@@ -84,11 +84,16 @@ const HomePage = () => {
       acc[position].push(member);
       return acc;
     }, {});
+    const sortedEntries = Object.entries(groupedByPosition).sort(
+      (a, b) => a[1].length - b[1].length
+    ); // Sort by smallest number of members in board section
+    // Convert it back into an object (optional)
+    const sortedGroupedByPosition = Object.fromEntries(sortedEntries);
 
     // Combine executive members at the top, followed by other grouped positions
     setPositionGroups({
       "Executive Board": executiveMembers,
-      ...groupedByPosition,
+      ...sortedGroupedByPosition,
     });
     setTeamLoaded(true);
   };
