@@ -21,6 +21,17 @@ p {
   font-weight: 500;
 }
 
+a {
+  color: #19a4a4;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 .bottom-underline {
   width: 30%;
   border-bottom: 5px solid #333;
@@ -304,6 +315,7 @@ p {
 
 .join-button:hover {
   background-color: #fbc091;
+  text-decoration: none;
 }
 
 .contact-link {
@@ -318,4 +330,5 @@ p {
 
 .contact-link:hover {
   background-color: #555;
+  text-decoration: none;
 }

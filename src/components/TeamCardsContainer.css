@@ -18,4 +18,5 @@
   margin: 0 auto; /* Center the container */
   padding-bottom: 1rem;
   cursor: default;
+  flex-wrap: wrap;
 }

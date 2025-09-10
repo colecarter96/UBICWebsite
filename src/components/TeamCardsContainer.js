@@ -1,4 +1,3 @@
-import React from "react";
 import TeamCard from "./TeamCard";
 import "./TeamCardsContainer.css";
 
@@ -12,9 +11,13 @@ const TeamCardsContainer = ({ members, title, limit }) => {
         {displayedEvents.map((member, index) => (
           <TeamCard
             key={index}
-            img={member.img}
+            img={
+              "/team_photos/" + member.name + ".jpg"
+            } /* Img path is public/team_photos/Firstname Lastname.jpg */
             name={member.name}
             position={member.position}
+            major={member.major}
+            email={member.email}
           />
         ))}
       </div>

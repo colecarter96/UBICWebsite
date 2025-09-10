@@ -46,6 +46,7 @@
 
 .myLink:hover {
   color: #19a4a4;
+  text-decoration: none;
 }
 
 li a.active {

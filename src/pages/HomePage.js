@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, doc, getDocs, addDoc, setDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import AboutSection from "../components/AboutSection";
 import Header from "../components/Header";
@@ -41,11 +41,21 @@ const HomePage = () => {
   const [positionGroups, setPositionGroups] = useState({});
 
   const fetchMembers = async () => {
-    const querySnapshot = await getDocs(collection(db, "teamMembers"));
-    const membersData = querySnapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    }));
+    let membersData;
+    try {
+      const querySnapshot = await getDocs(collection(db, "teamMembers"));
+      membersData = querySnapshot.docs.map((collection) => ({
+        id: collection.id,
+        ...collection.data(),
+      }));
+    } catch (error) {
+      if (error.name === "AbortError") {
+        // If Fetch was aborted
+        console.log("Fetch aborted");
+      } else {
+        console.error(error);
+      }
+    }
 
     // Define specific ordering for Executive positions
     const executiveOrder = [
@@ -69,7 +79,7 @@ const HomePage = () => {
       (member) => !executiveOrder.includes(member.position)
     );
     const groupedByPosition = otherMembers.reduce((acc, member) => {
-      const position = member.position || "Other"; // Use "Other" for missing positions
+      const position = member.boardSection || "Other"; // Use "Other" for missing positions
       if (!acc[position]) acc[position] = [];
       acc[position].push(member);
       return acc;
@@ -231,10 +241,10 @@ const HomePage = () => {
             <h2 style={{ margin: "1.5rem auto" }}>Our Mission</h2>
             <p>
               UBIC aims to provide students with opportunities to explore
-              bioinformatics through workshops, research presentations, and
-              networking events. We strive to create an inclusive environment
-              where students can learn, collaborate, and grow in their
-              understanding of this interdisciplinary field.
+              bioinformatics through workshops, career-building, and networking
+              events. We strive to create an inclusive environment where
+              students can learn, collaborate, and grow in their understanding
+              of this interdisciplinary field.
             </p>
 
             <div className="values-grid">
@@ -268,6 +278,11 @@ const HomePage = () => {
             <h1>Events</h1>
           </div>
 
+          <p className="centered-paragraph">
+            Make sure to join our weekly newsletter, Discord, and Instagram for
+            upcoming events.
+          </p>
+
           <div className="contact-methods">
             <EventCard
               imgsrc="/camping.svg"
@@ -289,9 +304,8 @@ const HomePage = () => {
             <EventCard
               imgsrc="/socials.svg"
               title="SOCIALS"
-              description="UBIC holds a variety of social events for students. These
-                  include bonfires, retreats, game nights, and more! Make sure
-                  to check our Discord and Instagram for upcoming social events."
+              description="UBIC hosts a variety of social events to make new friends. These
+                  include bonfires, retreats, game nights, and more! "
             ></EventCard>
 
             <EventCard
@@ -315,7 +329,7 @@ const HomePage = () => {
               imgsrc="/puzzles.svg"
               title="COMMUNITY SERVICE"
               description="Participate in giving back to the community, from volunteering
-                  at food banks to writing supportive messages."
+                  at food banks to crafting supportive cards."
             ></EventCard>
           </div>
         </section>
@@ -354,7 +368,7 @@ const HomePage = () => {
             Instagram, Weekly Newsletters, Discord Announcements, and the Events
             tab above.
           </p>
-          <h3> How often are events held?</h3> <p>3-5 times a month.</p>
+          <h3> How often are events held?</h3> <p>Several times a month.</p>
           <h3> Do we offer coding/bioinformatics tutorials?</h3>{" "}
           <p>
             {" "}
