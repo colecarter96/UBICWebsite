@@ -2,7 +2,7 @@ const imageFilenames = [
   "titleSlide.svg",
   "UBIC_GBM.jpg",
   "sungod.jpg",
-  "bonfire2024.jpg",
+  "bonfire_2024.jpg",
   "bonfire.jpg",
   "sungod2023.jpg",
   "foodBank.jpg",
