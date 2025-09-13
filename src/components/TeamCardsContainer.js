@@ -2,13 +2,16 @@ import TeamCard from "./TeamCard";
 import "./TeamCardsContainer.css";
 
 const TeamCardsContainer = ({ members, title, limit }) => {
-  const displayedEvents = limit ? members.slice(0, limit) : members;
+  const displayedMembers = limit ? members.slice(0, limit) : members;
+
+  // Determine if current section has a single member
+  //   const isSingleMember = displayedMembers.length === 1;
 
   return (
     <div className="team-cards-container">
       <h3>{title}</h3>
       <div className="cards-container">
-        {displayedEvents.map((member, index) => (
+        {displayedMembers.map((member, index) => (
           <TeamCard
             key={index}
             img={
@@ -17,6 +20,7 @@ const TeamCardsContainer = ({ members, title, limit }) => {
             name={member.name}
             position={member.position}
             major={member.major}
+            year={member.year}
             email={member.email}
           />
         ))}

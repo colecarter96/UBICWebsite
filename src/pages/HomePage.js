@@ -40,6 +40,8 @@ const HomePage = () => {
   const [teamLoaded, setTeamLoaded] = useState(false);
   const [positionGroups, setPositionGroups] = useState({});
 
+  const [isSingleMember, setSingleMember] = useState(false);
+
   const fetchMembers = async () => {
     let membersData;
     try {
@@ -84,17 +86,30 @@ const HomePage = () => {
       acc[position].push(member);
       return acc;
     }, {});
+    // Sort by smallest number of members in board section
     const sortedEntries = Object.entries(groupedByPosition).sort(
       (a, b) => a[1].length - b[1].length
-    ); // Sort by smallest number of members in board section
-    // Convert it back into an object (optional)
-    const sortedGroupedByPosition = Object.fromEntries(sortedEntries);
+    );
+    // Convert it back into an object, storing members + count
+    const sortedGroupedByPosition = Object.fromEntries(
+      sortedEntries.map(([position, members]) => [
+        position,
+        { members, count: members.length },
+      ])
+    );
 
     // Combine executive members at the top, followed by other grouped positions
     setPositionGroups({
-      "Executive Board": executiveMembers,
+      "Executive Board": {
+        members: executiveMembers,
+        count: executiveMembers.length,
+      },
       ...sortedGroupedByPosition,
     });
+    // const displayedMembers = limit ? members.slice(0, limit) : members;
+
+    // // Determine if current section has a single member
+    // setSingleMember(displayedMembers.length === 1);
     setTeamLoaded(true);
   };
 
@@ -126,7 +141,7 @@ const HomePage = () => {
         });
       },
       {
-        threshold: 0.3, // 20% of section must be visible
+        threshold: 0.1, // 20% of section must be visible
       }
     );
 
@@ -400,10 +415,17 @@ const HomePage = () => {
           </div>
           {teamLoaded === true ? (
             Object.keys(positionGroups).map((position) => (
-              <div key={position} className="position-section">
+              <div
+                key={position}
+                className={`${
+                  positionGroups[position].count === 1
+                    ? "single-member"
+                    : "position-section"
+                }`}
+              >
                 {/* {position !== "Executive" && <h2>{position}</h2>} */}
                 <TeamCardsContainer
-                  members={positionGroups[position]}
+                  members={positionGroups[position].members}
                   title={position}
                 />
               </div>

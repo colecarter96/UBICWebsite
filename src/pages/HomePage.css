@@ -48,8 +48,7 @@ a:hover {
 }
 
 .background-section {
-  display: flex;
-  flex-direction: column;
+  text-align: center;
   padding: 2rem;
 }
 
@@ -67,6 +66,19 @@ a:hover {
   gap: 2rem;
   cursor: pointer;
   user-select: none;
+}
+
+.position-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.single-member {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
 }
 
 .arrow-active {
