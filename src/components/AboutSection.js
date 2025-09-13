@@ -15,7 +15,7 @@ function AboutSection() {
         building friendships that will last a lifetime, this is your place to
         grow!
       </p>
-      <div className="innerContact">
+      <div style={{ marginTop: "1.5rem" }}>
         <a
           href="https://linktr.ee/ubic_ucsd?fbclid=PAZXh0bgNhZW0CMTEAAaZ8faMPmmRAiqd5e_xc-adjjHS-jyhX-_HPNpISt_SmrrhdPoJnG1x2mLY_aem_e2KImZgOMJKHuXiGcvvdkA"
           target="_blank"
@@ -31,7 +31,9 @@ function AboutSection() {
           <h3>Email</h3>
           <p>Contact us at ubic@ucsd.edu</p>
           <div className="innerContact">
-            <img src="/mail_black.svg" alt="mail_logo" height="40px"></img>
+            <a href="mailto:ubic@ucsd.edu">
+              <img src="/mail_black.svg" alt="mail_logo" height="40px"></img>
+            </a>
             <a
               href="mailto:ubic@ucsd.edu"
               target="_blank"

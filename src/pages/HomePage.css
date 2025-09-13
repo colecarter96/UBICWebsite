@@ -16,6 +16,7 @@ h3 {
 }
 
 p {
+  color: #333;
   line-height: 1.6;
   font-size: 1.1rem;
   font-weight: 500;
@@ -49,6 +50,9 @@ a:hover {
 
 .background-section {
   text-align: center;
+  padding: 2rem;
+}
+.faq-section {
   padding: 2rem;
 }
 
@@ -277,13 +281,16 @@ a:hover {
 }
 
 .contact-card {
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.2s ease;
   cursor: default;
+
+  display: flex;
+  flex-direction: column; /* stack children vertically */
 }
 
 .contact-card:hover {
@@ -305,7 +312,6 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 1.5rem;
 }
 
 .join-button {

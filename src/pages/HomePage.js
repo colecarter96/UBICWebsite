@@ -377,7 +377,7 @@ const HomePage = () => {
         </section>
 
         {/* Section 4: FAQ Section*/}
-        <section ref={faqRef} id="faq" className="background-section">
+        <section ref={faqRef} id="faq" className="faq-section">
           <div className="bottom-underline">
             <h1>FAQ</h1>
           </div>
