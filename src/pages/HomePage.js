@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { collection, doc, getDocs, addDoc, setDoc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import AboutSection from "../components/AboutSection";
 import Header from "../components/Header";
@@ -39,8 +39,6 @@ const HomePage = () => {
   // Lazy Load for Team
   const [teamLoaded, setTeamLoaded] = useState(false);
   const [positionGroups, setPositionGroups] = useState({});
-
-  const [isSingleMember, setSingleMember] = useState(false);
 
   const fetchMembers = async () => {
     let membersData;
