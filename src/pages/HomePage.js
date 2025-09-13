@@ -196,9 +196,10 @@ const HomePage = () => {
                 <p>
                   Bioinformatics is an interdisciplinary field that combines
                   biology, computer science, mathematics, and statistics to
-                  analyze and interpret biological data. It is crucial to
-                  understanding complex biological systems and advancing medical
-                  research.
+                  analyze and interpret biological data. It plays a key role in
+                  making sense of large-scale datasets, driving discoveries
+                  across the life sciences, and enabling applications in
+                  research, healthcare, and industry.
                 </p>
 
                 <h2>Applications</h2>
@@ -217,15 +218,24 @@ const HomePage = () => {
                   </div>
                   <div className="application-card">
                     <h3>Disease Research</h3>
-                    <p>Understanding disease mechanisms and treatments</p>
-                  </div>
-                  <div className="application-card">
-                    <h3>Other Biotech</h3>
-                    <p>Biotech applications of bioinformatics</p>
+                    <p>
+                      Investigating disease mechanism to improve diagnosis and
+                      treatment
+                    </p>
                   </div>
                   <div className="application-card">
                     <h3>Data Visualization</h3>
-                    <p>Graphing and displaying bioinformatics data</p>
+                    <p>
+                      Visualizing complex biological datasets into clear,
+                      interpretable insights
+                    </p>
+                  </div>
+                  <div className="application-card">
+                    <h3>Other Biotech</h3>
+                    <p>
+                      Using computational tools to develop new technologies,
+                      products, and solutions in industry
+                    </p>
                   </div>
                 </div>
 
@@ -286,6 +296,13 @@ const HomePage = () => {
                 <h3>Collaboration</h3>
                 <p>Working together to solve complex biological problems</p>
               </div>
+              <div className="value-card">
+                <h3>Resources</h3>
+                <p>
+                  Provide resources from current UCSD students in industry &
+                  academia
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -297,33 +314,27 @@ const HomePage = () => {
           </div>
 
           <p className="centered-paragraph">
-            Make sure to join our weekly newsletter, Discord, and Instagram for
-            upcoming events.
+            Make sure to join our Discord, Instagram, and Newsletter on our
+            Linktree for upcoming events.
           </p>
 
           <div className="contact-methods">
             <EventCard
               imgsrc="/camping.svg"
               title="WORKSHOPS"
-              description="A quarter-long sequence for both new and experienced
-                  bioinformaticians, from introductory Python lessons to
-                  challenging data analysis projects."
+              description="Bi-weekly workshops aimed at teaching students bioinformatics and its applications across a variety of fields. We first introduce key concepts, then provide hands-on activities and share useful tools to help students explore and apply what they’ve learned."
             ></EventCard>
 
             <EventCard
               imgsrc="/chalk_talk.svg"
               title="CHALK TALKS"
-              description="Professors from various fields are invited every chalk talk to
-                  describe their research focus. Explore the vibrant
-                  bioinformatics research community on campus and network with
-                  UCSD professors!"
+              description="Professors from various fields share their research and often seek to recruit passionate students. Explore the vibrant bioinformatics research community on campus, ask questions, and network with UCSD professors!"
             ></EventCard>
 
             <EventCard
               imgsrc="/socials.svg"
               title="SOCIALS"
-              description="UBIC hosts a variety of social events to make new friends. These
-                  include bonfires, retreats, game nights, and more! "
+              description="UBIC hosts a variety of social events including Bonfires, Holiday Events, game nights, arts & craft, movie nights, Murder Mystery, and more! Be sure to come out to these events and make new friends!"
             ></EventCard>
 
             <EventCard
@@ -337,17 +348,13 @@ const HomePage = () => {
             <EventCard
               imgsrc="/conference_speaker.svg"
               title="INDUSTRY PANELS"
-              description="Industry professionals and UCSD alumni at various biotech
-                  companies are invited to share their experiences and give
-                  advice. Get the opportunity to network with industry
-                  professionals!"
+              description="Industry professionals and UCSD alumni from various biotech companies are invited to share their experiences and offer valuable career advice. Many are also looking to recruit students, so take advantage of the opportunity to network, learn about the companies, and make connections!"
             ></EventCard>
 
             <EventCard
               imgsrc="/puzzles.svg"
               title="COMMUNITY SERVICE"
-              description="Participate in giving back to the community, from volunteering
-                  at food banks to crafting supportive cards."
+              description="Get involved and give back to the community! We organize a variety of events, from volunteering at food pantries and making cards for kids to assembling care packages and more. Join us and make a positive impact in the lives of others!"
             ></EventCard>
           </div>
         </section>
@@ -383,10 +390,15 @@ const HomePage = () => {
           <p> No, but attend all events that you are interested in!</p>
           <h3>What is the best way to stay updated about events?</h3>{" "}
           <p>
-            Instagram, Weekly Newsletters, Discord Announcements, and the Events
-            tab above.
+            Opt in for our Newsletter by becoming an Active Member on our
+            Linktree. Also connect through Instagram Posts, Discord
+            Announcements, and the Events tab above.
           </p>
-          <h3> How often are events held?</h3> <p>Several times a month.</p>
+          <h3> How often are events held?</h3>{" "}
+          <p>
+            On average 2 to 3 events per week. We have a very diverse range of
+            events, so be sure to check them out!
+          </p>
           <h3> Do we offer coding/bioinformatics tutorials?</h3>{" "}
           <p>
             {" "}
@@ -401,8 +413,8 @@ const HomePage = () => {
             How do I stay updated on research and industry opportunities?
           </h3>{" "}
           <p>
-            Join the discord #opportunities channel, and check the Resources tab
-            above.
+            Join the discord #opportunities channel, come to our in-person
+            events, and check the Resources tab above.
           </p>
         </section>
 

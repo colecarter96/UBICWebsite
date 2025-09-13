@@ -96,11 +96,14 @@ a:hover {
 .values-grid {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .value-card {
+  max-width: 250px;
   padding: 1.5rem;
   background-color: #f8f9fa;
   border-radius: 8px;
@@ -261,6 +264,7 @@ a:hover {
 
 .application-card h3,
 .skill-card h3 {
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
@@ -285,7 +289,6 @@ a:hover {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
   transition: transform 0.2s ease;
   cursor: default;
 
