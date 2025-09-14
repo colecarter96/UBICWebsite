@@ -322,7 +322,7 @@ const HomePage = () => {
             <EventCard
               imgsrc="/camping.svg"
               title="WORKSHOPS"
-              description="Bi-weekly workshops aimed at teaching students bioinformatics and its applications across a variety of fields. We first introduce key concepts, then provide hands-on activities and share useful tools to help students explore and apply what they’ve learned."
+              description="Bi-weekly workshops aimed at teaching students bioinformatics and its applications across a variety of fields. We first introduce key concepts, then provide hands-on activities and useful tools to help students explore and apply what they’ve learned."
             ></EventCard>
 
             <EventCard
@@ -379,6 +379,14 @@ const HomePage = () => {
             <h1>Resources</h1>
           </div>
           <h3 style={{ margin: "2rem auto" }}>Coming Soon!</h3>
+          <div className="center-flex">
+            <ul style={{ textAlign: "left" }}>
+              <li>Bioinformatics Handbook (UBIC Version)</li>
+              <li>Official Handbook</li>
+              <li>Industry 101 & Contacts</li>
+              <li>4 Year Planning Guide</li>
+            </ul>
+          </div>
         </section>
 
         {/* Section 4: FAQ Section*/}

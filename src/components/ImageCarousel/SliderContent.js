@@ -1,4 +1,3 @@
-import React from "react";
 function SliderContent({ activeIndex, SliderImage }) {
   return (
     <section>
@@ -17,9 +16,11 @@ function SliderContent({ activeIndex, SliderImage }) {
               style={{ width: "300px" }}
             />
           )}
-          <h2 className="slide-title">{slide.title}</h2>
-          <h3 className="slide-text">{slide.description}</h3>
-          <h4 className="slide-text2">{slide.description2}</h4>
+          <div className="flex-slide">
+            <h2 className="slide-title">{slide.title}</h2>
+            <h3 className="slide-text">{slide.description}</h3>
+            <h4 className="slide-text2">{slide.description2}</h4>
+          </div>
         </div>
       ))}
     </section>

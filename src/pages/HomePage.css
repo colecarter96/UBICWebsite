@@ -14,20 +14,18 @@ h3 {
   font-size: 1.4rem;
   margin: 1rem 0rem;
 }
-
-p {
+p,
+.center-flex li {
   color: #333;
   line-height: 1.6;
   font-size: 1.1rem;
   font-weight: 500;
 }
-
 a {
   color: #19a4a4;
   background-color: transparent;
   text-decoration: none;
 }
-
 a:hover {
   background-color: transparent;
   text-decoration: underline;

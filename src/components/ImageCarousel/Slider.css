@@ -41,25 +41,29 @@ slider-container {
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
+.flex-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
 .slide-title,
 .slide-text,
 .slide-text2 {
   width: 100%;
   color: white;
   font-size: 50px;
-  position: absolute;
   text-align: center;
-  top: 40%;
   z-index: 10;
 }
 .slide-text {
-  top: 60%; /* Change Position of Text Here */
   width: 70%;
   left: 15%;
   font-size: 4.5vw;
 }
 .slide-text2 {
-  top: 85%; /* Change Position of Text Here */
   font-size: 2.5vw;
   font-weight: 400;
 }
