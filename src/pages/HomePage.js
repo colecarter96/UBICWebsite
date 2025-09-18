@@ -181,6 +181,7 @@ const HomePage = () => {
         <section className="intro-section">
           <div
             className="center-flex"
+            style={{ cursor: "pointer" }}
             onClick={() => toggleBioinformatics(!openBioinformatics)}
           >
             <img

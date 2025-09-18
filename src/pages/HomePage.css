@@ -20,6 +20,7 @@ p,
   line-height: 1.6;
   font-size: 1.1rem;
   font-weight: 500;
+  user-select: auto;
 }
 a {
   color: #19a4a4;
@@ -66,7 +67,6 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  cursor: pointer;
   user-select: none;
 }
 
