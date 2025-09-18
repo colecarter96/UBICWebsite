@@ -54,17 +54,19 @@ slider-container {
 .slide-text2 {
   width: 100%;
   color: white;
-  font-size: 50px;
   text-align: center;
   z-index: 10;
+}
+.slide-title {
+  font-size: 80px;
 }
 .slide-text {
   width: 70%;
   left: 15%;
-  font-size: 4.5vw;
+  font-size: 60px;
 }
 .slide-text2 {
-  font-size: 2.5vw;
+  font-size: 40px;
   font-weight: 400;
 }
 .prev,
