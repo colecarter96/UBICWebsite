@@ -9,8 +9,10 @@
 
 .main {
   display: flex;
+  flex-direction: row;
+
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -25,27 +27,24 @@
   color: white;
 }
 
-.footer-section {
-  flex: 1;
-  min-width: 0;
+.footer h2 {
+  color: white;
+}
+
+.footer-section a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.footer-section a:hover {
+  transform: scale(1.1);
+  text-decoration: none;
 }
 
 .footer-section:first-child,
 .footer-section:last-child {
   margin: 0 2rem;
-}
-
-.footer-section p {
-  color: white;
-}
-
-.footer-section a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-section a:hover {
-  text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
