@@ -91,7 +91,7 @@ function AboutSection() {
               rel="noopener noreferrer"
               className="contact-link"
             >
-              @ucsd_bioinformatics
+              @bioinformatics_at_ucsd
             </a>
           </div>
         </div>
