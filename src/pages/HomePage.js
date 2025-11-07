@@ -365,10 +365,39 @@ const HomePage = () => {
           <div className="bottom-underline">
             <h1>Merch</h1>
           </div>
-          <h3 style={{ margin: "2rem auto" }}>Coming Soon!</h3>
+          {/* <div>
+        <a
+          href="https://linktr.ee/UBIC_at_UCSD"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="join-button"
+        >
+          Join Us
+          <img src="/linktree_white.svg" alt="contact_logo" height="35px"></img>
+        </a>
+      </div> */}
+          <div>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScPNcLtdqtp6ogt5Gyo-ADH4dl7Z5edao3PMXktogd-4fgJsQ/viewform?usp=dialog"
+              className="join-button"
+              style={{
+                backgroundColor: "#19a4a4",
+                boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.4)",
+              }}
+            >
+              <img
+                src="/link.svg"
+                alt="link"
+                height="30px"
+                style={{ filter: "invert(100%)" }}
+              ></img>
+              Merch Interest Form
+            </a>
+          </div>
+          <br></br>
           <div className="center-flex">
-            <img src="/shirts2023.jpg" alt="tshirts" width="400px"></img>
-            <img src="/shirts2025.jpg" alt="tshirts2" width="400px"></img>
+            <img src="/shirts2023.jpg" alt="tshirts" height="400px"></img>
+            <img src="/shirts2025.jpg" alt="tshirts2" height="400px"></img>
           </div>
         </section>
         <section

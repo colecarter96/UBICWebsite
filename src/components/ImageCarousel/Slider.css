@@ -58,15 +58,15 @@ slider-container {
   z-index: 10;
 }
 .slide-title {
-  font-size: 80px;
+  font-size: 8vh;
 }
 .slide-text {
   width: 70%;
   left: 15%;
-  font-size: 60px;
+  font-size: 6vh;
 }
 .slide-text2 {
-  font-size: 40px;
+  font-size: 4vh;
   font-weight: 400;
 }
 .prev,

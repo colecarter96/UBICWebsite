@@ -57,8 +57,14 @@ function Footer() {
         </div>
         <div className="footer-section">
           <p>Special Thanks to Our Sponsors</p>
-          <img src="/footer_logos/fanfan.png" alt="Sponsor 1" />
-          <img src="/footer_logos/monoceros1.png" alt="Sponsor 2" />
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <a href="http://fanfangroup.com">
+              <img src="/footer_logos/fanfan.png" alt="Sponsor 1" />
+            </a>
+            <a href="https://monocerosbio.com">
+              <img src="/footer_logos/monoceros1.png" alt="Sponsor 2" />
+            </a>
+          </div>
         </div>
       </div>
 
