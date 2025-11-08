@@ -360,6 +360,23 @@ const HomePage = () => {
           </div>
         </section>
 
+        {/* Section 2.5: Events This Week Section*/}
+        <section
+          ref={resourcesRef}
+          id="resources"
+          className="background-section"
+        >
+          <h2 style={{ margin: "1.5rem auto" }}>Events This Week</h2>
+          <div className="center-flex">
+            <ul style={{ textAlign: "left" }}>
+              <li>Bioinformatics Handbook (UBIC Version)</li>
+              <li>Official Handbook</li>
+              <li>Industry 101 & Contacts</li>
+              <li>4 Year Planning Guide</li>
+            </ul>
+          </div>
+        </section>
+
         {/* Section 3: Merch Section*/}
         <section ref={merchRef} id="merch" className="background-section">
           <div className="bottom-underline">
@@ -379,11 +396,7 @@ const HomePage = () => {
           <div>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLScPNcLtdqtp6ogt5Gyo-ADH4dl7Z5edao3PMXktogd-4fgJsQ/viewform?usp=dialog"
-              className="join-button"
-              style={{
-                backgroundColor: "#19a4a4",
-                boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.4)",
-              }}
+              className="merch-button"
             >
               <img
                 src="/link.svg"
@@ -394,12 +407,13 @@ const HomePage = () => {
               Merch Interest Form
             </a>
           </div>
-          <br></br>
-          <div className="center-flex">
+          <div className="center-flex" style={{ marginTop: "30px" }}>
             <img src="/shirts2023.jpg" alt="tshirts" height="400px"></img>
             <img src="/shirts2025.jpg" alt="tshirts2" height="400px"></img>
           </div>
         </section>
+
+        {/* Section 4: Resources Section*/}
         <section
           ref={resourcesRef}
           id="resources"
@@ -419,7 +433,7 @@ const HomePage = () => {
           </div>
         </section>
 
-        {/* Section 4: FAQ Section*/}
+        {/* Section 5: FAQ Section*/}
         <section ref={faqRef} id="faq" className="faq-section">
           <div className="bottom-underline">
             <h1>FAQ</h1>
@@ -456,7 +470,7 @@ const HomePage = () => {
           </p>
         </section>
 
-        {/* Section 5: Team Section*/}
+        {/* Section 6: Team Section*/}
         <section ref={teamRef} id="team" className="background-section">
           <div className="bottom-underline">
             <h1>Team</h1>
