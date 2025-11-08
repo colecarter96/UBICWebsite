@@ -368,12 +368,7 @@ const HomePage = () => {
         >
           <h2 style={{ margin: "1.5rem auto" }}>Events This Week</h2>
           <div className="center-flex">
-            <ul style={{ textAlign: "left" }}>
-              <li>Bioinformatics Handbook (UBIC Version)</li>
-              <li>Official Handbook</li>
-              <li>Industry 101 & Contacts</li>
-              <li>4 Year Planning Guide</li>
-            </ul>
+            <h3 style={{ margin: "2rem auto" }}>Coming Soon!</h3>
           </div>
         </section>
 
