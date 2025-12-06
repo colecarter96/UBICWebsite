@@ -126,21 +126,25 @@ a:hover {
 @media screen and (max-width: 768px) {
   .about-content {
     padding-top: 6rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .about-section,
   .values-section {
-    padding: 1.5rem;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .values-grid {

@@ -13,7 +13,6 @@ function SliderContent({ activeIndex, SliderImage }) {
               className="overlay-image"
               src="/ubicLogo_white.png"
               alt="UBIC_logo_white"
-              style={{ width: "300px" }}
             />
           )}
           <div className="flex-slide">

@@ -60,7 +60,7 @@ function Header({ alwaysBackground, activeSection }) {
               className={activeSection === "about" ? "active" : "myLink"}
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <li>About</li>
+              About
             </a>
           </li>
           <li>
@@ -69,7 +69,7 @@ function Header({ alwaysBackground, activeSection }) {
               className={activeSection === "events" ? "active" : "myLink"}
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <li>Events</li>
+              Events
             </a>
           </li>
           <li>
@@ -78,7 +78,7 @@ function Header({ alwaysBackground, activeSection }) {
               className={activeSection === "merch" ? "active" : "myLink"}
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <li>Merch</li>
+              Merch
             </a>
           </li>
           <li>
@@ -87,7 +87,7 @@ function Header({ alwaysBackground, activeSection }) {
               className={activeSection === "resources" ? "active" : "myLink"}
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <li>Resources</li>
+              Resources
             </a>
           </li>
           <li>
@@ -96,7 +96,7 @@ function Header({ alwaysBackground, activeSection }) {
               className={activeSection === "faq" ? "active" : "myLink"}
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <li>FAQ</li>
+              FAQ
             </a>
           </li>
           <li>
@@ -105,7 +105,7 @@ function Header({ alwaysBackground, activeSection }) {
               className={activeSection === "team" ? "active" : "myLink"}
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <li>Team</li>
+              Team
             </a>
           </li>
         </ul>

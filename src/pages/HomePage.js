@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
+import { Image, ImageKitProvider } from "@imagekit/react";
 import AboutSection from "../components/AboutSection";
 import Header from "../components/Header";
 import Carousel from "../components/ImageCarousel/Slider";
@@ -368,7 +369,32 @@ const HomePage = () => {
         >
           <h2 style={{ margin: "1.5rem auto" }}>Events This Week</h2>
           <div className="center-flex">
-            <h3 style={{ margin: "2rem auto" }}>Coming Soon!</h3>
+            <h3 style={{ margin: "2rem auto" }}>Events Coming Soon!</h3>
+          </div>
+          <div className="center-flex">
+            <ImageKitProvider urlEndpoint="https://ik.imagekit.io/6nqhog2gg">
+              <Image
+                src="/Flyer1.png"
+                width={300}
+                height={300}
+                transformation={[{ width: 300, height: 300 }]}
+                alt="Flyer"
+              />
+              <Image
+                src="/Big Little Reveal.png"
+                width={300}
+                height={300}
+                alt="Flyer"
+                transformation={[{ width: 300, height: 300 }]}
+              />
+              <Image
+                src="/Grad_Lab Advice.png"
+                width={300}
+                height={300}
+                transformation={[{ width: 300, height: 300 }]}
+                alt="Flyer"
+              />
+            </ImageKitProvider>
           </div>
         </section>
 
@@ -377,17 +403,6 @@ const HomePage = () => {
           <div className="bottom-underline">
             <h1>Merch</h1>
           </div>
-          {/* <div>
-        <a
-          href="https://linktr.ee/UBIC_at_UCSD"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="join-button"
-        >
-          Join Us
-          <img src="/linktree_white.svg" alt="contact_logo" height="35px"></img>
-        </a>
-      </div> */}
           <div>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLScPNcLtdqtp6ogt5Gyo-ADH4dl7Z5edao3PMXktogd-4fgJsQ/viewform?usp=dialog"
