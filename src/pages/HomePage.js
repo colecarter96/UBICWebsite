@@ -247,19 +247,19 @@ const HomePage = () => {
 
                 <h2>Key Skills</h2>
                 <div className="skills-grid">
-                  <div className="skill-card">
+                  <div className="application-card">
                     <h3>Programming</h3>
                     <p>Command line, Python, R, C++, and more</p>
                   </div>
-                  <div className="skill-card">
+                  <div className="application-card">
                     <h3>Data Analysis</h3>
                     <p>Statistical analysis and visualization</p>
                   </div>
-                  <div className="skill-card">
+                  <div className="application-card">
                     <h3>Biology</h3>
                     <p>Understanding biological systems</p>
                   </div>
-                  <div className="skill-card">
+                  <div className="application-card">
                     <h3>Machine Learning</h3>
                     <p>AI and predictive modeling</p>
                   </div>
@@ -280,35 +280,32 @@ const HomePage = () => {
               students can learn, collaborate, and grow in their understanding
               of this interdisciplinary field.
             </p>
-
-            <div className="values-grid">
-              <div className="value-card">
-                <h3>Learning</h3>
-                <p>
-                  Continuous education and skill development in bioinformatics
-                </p>
-              </div>
-              <div className="value-card">
-                <h3>Community</h3>
-                <p>
-                  Building a supportive network of bioinformatics enthusiasts
-                </p>
-              </div>
-              <div className="value-card">
-                <h3>Innovation</h3>
-                <p>Exploring cutting-edge developments in the field</p>
-              </div>
-              <div className="value-card">
-                <h3>Collaboration</h3>
-                <p>Working together to solve complex biological problems</p>
-              </div>
-              <div className="value-card">
-                <h3>Resources</h3>
-                <p>
-                  Provide resources from current UCSD students in industry &
-                  academia
-                </p>
-              </div>
+          </div>
+          <div className="values-grid">
+            <div className="value-card">
+              <h3>Learning</h3>
+              <p>
+                Continuous education and skill development in bioinformatics
+              </p>
+            </div>
+            <div className="value-card">
+              <h3>Community</h3>
+              <p>Building a supportive network of bioinformatics enthusiasts</p>
+            </div>
+            <div className="value-card">
+              <h3>Innovation</h3>
+              <p>Exploring cutting-edge developments in the field</p>
+            </div>
+            <div className="value-card">
+              <h3>Collaboration</h3>
+              <p>Working together to solve complex biological problems</p>
+            </div>
+            <div className="value-card">
+              <h3>Resources</h3>
+              <p>
+                Provide resources from current UCSD students in industry &
+                academia
+              </p>
             </div>
           </div>
         </section>
