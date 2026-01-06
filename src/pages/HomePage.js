@@ -6,6 +6,7 @@ import AboutSection from "../components/AboutSection";
 import Header from "../components/Header";
 import Carousel from "../components/ImageCarousel/Slider";
 import EventCard from "../components/EventCard";
+import EventsGallery from "../components/EventsGallery";
 import TeamCardsContainer from "../components/TeamCardsContainer";
 import Footer from "../components/Footer";
 import "./HomePage.css";
@@ -19,6 +20,8 @@ import "./HomePage.css";
 //     { title: 'Event 5', date: '2024-11-30', description: 'Description for Event 5' },
 //     // Add more events as needed
 // ];
+
+const URL_ENDPOINT = "https://ik.imagekit.io/6nqhog2gg";
 
 const HomePage = () => {
   // Filter events to get the upcoming 3 events by date
@@ -56,6 +59,7 @@ const HomePage = () => {
       } else {
         console.error(error);
       }
+      return;
     }
 
     // Define specific ordering for Executive positions
@@ -315,10 +319,15 @@ const HomePage = () => {
             <h1>Events</h1>
           </div>
 
-          <p className="centered-paragraph">
-            Make sure to join our Discord, Instagram, and Newsletter on our
-            Linktree for upcoming events.
-          </p>
+          {/* Section 2.5: Events This Week Section*/}
+          <section className="background-section">
+            <h2 style={{ margin: "0rem 0rem 3rem" }}>Events This Week</h2>
+            <p className="centered-paragraph">
+              Make sure to join our Discord, Instagram, and Newsletter on our
+              Linktree for upcoming events.
+            </p>
+            <EventsGallery></EventsGallery>
+          </section>
 
           <div className="contact-methods">
             <EventCard
@@ -361,50 +370,14 @@ const HomePage = () => {
           </div>
         </section>
 
-        {/* Section 2.5: Events This Week Section*/}
-        <section
-          ref={resourcesRef}
-          id="resources"
-          className="background-section"
-        >
-          <h2 style={{ margin: "1.5rem auto" }}>Events This Week</h2>
-          <div className="center-flex">
-            <h3 style={{ margin: "2rem auto" }}>Events Coming Soon!</h3>
-          </div>
-          <div className="center-flex">
-            <ImageKitProvider urlEndpoint="https://ik.imagekit.io/6nqhog2gg">
-              <Image
-                src="/Flyer1.png"
-                width={300}
-                height={300}
-                transformation={[{ width: 300, height: 300 }]}
-                alt="Flyer"
-              />
-              <Image
-                src="/Big Little Reveal.png"
-                width={300}
-                height={300}
-                alt="Flyer"
-                transformation={[{ width: 300, height: 300 }]}
-              />
-              <Image
-                src="/Grad_Lab Advice.png"
-                width={300}
-                height={300}
-                transformation={[{ width: 300, height: 300 }]}
-                alt="Flyer"
-              />
-            </ImageKitProvider>
-          </div>
-        </section>
-
         {/* Section 3: Merch Section*/}
         <section ref={merchRef} id="merch" className="background-section">
           <div className="bottom-underline">
             <h1>Merch</h1>
           </div>
           <div>
-            <a
+            <h2>2025-2026 UBIC Merch!</h2>
+            {/* <a
               href="https://docs.google.com/forms/d/e/1FAIpQLScPNcLtdqtp6ogt5Gyo-ADH4dl7Z5edao3PMXktogd-4fgJsQ/viewform?usp=dialog"
               className="merch-button"
             >
@@ -415,13 +388,38 @@ const HomePage = () => {
                 style={{ filter: "invert(100%)" }}
               ></img>
               Merch Interest Form
-            </a>
+            </a> */}
           </div>
-          <div className="center-flex" style={{ marginTop: "30px" }}>
-            <img src="/shirts2023.jpg" alt="tshirts" height="400px"></img>
-            <img src="/shirts2025.jpg" alt="tshirts2" height="400px"></img>
+          <div className="center-flex">
+            <ImageKitProvider urlEndpoint={URL_ENDPOINT}>
+              <Image
+                src="/Crewneck1.png"
+                width={300}
+                height={300}
+                transformation={[{ width: 300, height: 300 }]}
+                alt="Flyer"
+              />
+              <Image
+                src="/Crewneck2.png"
+                width={300}
+                height={300}
+                alt="Flyer"
+                transformation={[{ width: 300, height: 300 }]}
+              />
+              <Image
+                src="/Crewneck3.png"
+                width={300}
+                height={300}
+                transformation={[{ width: 300, height: 300 }]}
+                alt="Flyer"
+              />
+            </ImageKitProvider>
           </div>
         </section>
+        <p>
+          Official deadline has passed. Contact{" "}
+          <a href="mailto:ubic@ucsd.edu">ubic@ucsd.edu</a> if interested!
+        </p>
 
         {/* Section 4: Resources Section*/}
         <section

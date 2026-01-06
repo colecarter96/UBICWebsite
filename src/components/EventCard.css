@@ -1,40 +1,75 @@
 .event-card {
-  position: relative;
-  padding: 2rem;
+  flex: 1 1 300px; /* grow/shrink, base width 300px */
+  padding: 1rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.2s ease;
   cursor: default;
+  box-sizing: border-box;
 }
 
-.event-card p {
-  font-size: 17px;
-  opacity: 0;
-  margin-bottom: 1rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 2rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Hover overlay for devices that support hover */
+@media (hover: hover) and (pointer: fine) {
+  .event-card p {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    opacity: 0;
+    margin-bottom: 1rem;
+    height: 100%;
+    transition: opacity 0.1s ease;
+  }
+
+  .event-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+  }
+
+  .event-card:hover h3,
+  .event-card:hover img {
+    opacity: 0;
+    transition: opacity 0.1s ease;
+  }
+
+  .event-card:hover p {
+    opacity: 1;
+  }
 }
 
-.event-card:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
+/* Mobile / non-hover devices: remove the <p> overlay */
+@media (hover: none) and (pointer: coarse), (max-width: 600px) {
+  .event-card p {
+    display: none;
+  }
+
+  .event-card {
+    padding: 0.5rem;
+  }
+
+  .event-card h3 {
+    font-size: 1rem;
+  }
 }
 
-.event-card:hover h2,
-.event-card:hover img {
-  opacity: 0;
-  transition: opacity 0.1s ease;
+.event-img {
+  width: auto;
+  height: 13vw;
 }
 
-.event-card:hover p {
-  opacity: 1;
-  transition: opacity 0.1s ease;
+@media (max-width: 600px) {
+  .event-card h3 {
+    font-size: 0.8rem;
+  }
+  .event-card {
+    padding: 0;
+  }
+  .event-img {
+    width: auto;
+    height: 20vw;
+  }
 }
