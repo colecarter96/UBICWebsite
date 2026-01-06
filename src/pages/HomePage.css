@@ -395,15 +395,8 @@ a:hover {
     font-size: 0.7rem;
   }
 
-  .contact-methods,
-  .values-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 0.5rem;
-    margin: 0.5rem;
-  }
-
   .contact-card {
-    padding: 0.25rem 1rem 0.25rem;
+    padding: 0.25rem 0.8rem 0.25rem;
     margin: 0;
   }
 
@@ -430,5 +423,14 @@ a:hover {
 
   .center-flex {
     gap: 0.5rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .contact-methods,
+  .values-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+    margin: 0.5rem;
   }
 }

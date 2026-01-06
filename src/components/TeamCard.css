@@ -29,7 +29,7 @@
 
 .team-card img {
   width: clamp(90px, 12vw, 180px);
-  height: clamp(90px, 12vw, 180px);
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 16px;
   margin-bottom: 0.8rem;
@@ -88,7 +88,8 @@
 
 @media (max-width: 600px) {
   .team-cards-container .team-card {
-    padding: 0;
+    padding: 0.1rem 0.2rem;
+    max-width: 150px;
   }
   .team-cards-container .team-card h3 {
     font-size: 1rem;
