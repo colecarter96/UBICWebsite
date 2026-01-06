@@ -17,4 +17,4 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_UBIC_WEBSITE_COLE }}
           channelId: live
-          projectId: ubic-website-cole
+          projectId: ubic-ucsd
