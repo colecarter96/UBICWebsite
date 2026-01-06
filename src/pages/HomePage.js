@@ -6,7 +6,7 @@ import AboutSection from "../components/AboutSection";
 import Header from "../components/Header";
 import Carousel from "../components/ImageCarousel/Slider";
 import EventCard from "../components/EventCard";
-import EventsGallery from "../components/EventsGallery";
+// import EventsGallery from "../components/EventsGallery";
 import TeamCardsContainer from "../components/TeamCardsContainer";
 import Footer from "../components/Footer";
 import "./HomePage.css";
@@ -91,7 +91,7 @@ const HomePage = () => {
     }, {});
     // Sort by smallest number of members in board section
     const sortedEntries = Object.entries(groupedByPosition).sort(
-      (a, b) => a[1].length - b[1].length
+      (a, b) => b[1].length - a[1].length
     );
     // Convert it back into an object, storing members + count
     const sortedGroupedByPosition = Object.fromEntries(
@@ -400,27 +400,9 @@ const HomePage = () => {
           </p>
           <div className="center-flex">
             <ImageKitProvider urlEndpoint={URL_ENDPOINT}>
-              <Image
-                src="/Crewneck1.png"
-                width={300}
-                height={300}
-                transformation={[{ width: 300, height: 300 }]}
-                alt="Flyer"
-              />
-              <Image
-                src="/Crewneck2.png"
-                width={300}
-                height={300}
-                alt="Flyer"
-                transformation={[{ width: 300, height: 300 }]}
-              />
-              <Image
-                src="/Crewneck3.png"
-                width={300}
-                height={300}
-                transformation={[{ width: 300, height: 300 }]}
-                alt="Flyer"
-              />
+              <Image src="/Crewneck1.png" className="merch-img" alt="Merch1" />
+              <Image src="/Crewneck2.png" className="merch-img" alt="Merch2" />
+              <Image src="/Crewneck3.png" className="merch-img" alt="Merch3" />
             </ImageKitProvider>
           </div>
         </section>

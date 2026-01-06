@@ -28,17 +28,18 @@
 }
 
 .team-card img {
-  width: 180px; /* Larger size */
-  height: 180px; /* Keep height same as width for square shape */
-  object-fit: cover; /* Ensures image covers the area */
-  border-radius: 16px; /* Slightly rounded corners for a softer look */
+  width: clamp(90px, 12vw, 180px);
+  height: clamp(90px, 12vw, 180px);
+  object-fit: cover;
+  border-radius: 16px;
   margin-bottom: 0.8rem;
 }
 
-.team-card h3 {
+.team-cards-container .team-card h3 {
   margin: 0;
-  /* font-size: 24px; */
   color: #333;
+  font-size: 1.5rem;
+  font-weight: normal;
 }
 
 .team-card p {
@@ -75,8 +76,7 @@
   transition: opacity 0.3s ease;
 }
 
-.team-card:hover h3,
-p {
+.team-card:hover h3 {
   color: gray;
 }
 
@@ -84,4 +84,16 @@ p {
   color: white;
   opacity: 1;
   transition: opacity 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .team-cards-container .team-card {
+    padding: 0;
+  }
+  .team-cards-container .team-card h3 {
+    font-size: 1rem;
+  }
+  .team-cards-container .team-card p {
+    font-size: 0.7rem;
+  }
 }

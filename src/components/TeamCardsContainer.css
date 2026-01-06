@@ -15,7 +15,7 @@
   align-items: stretch;
   gap: 1rem;
   margin: 0 auto; /* Center the container */
-  padding-bottom: 1rem;
+  padding-bottom: 0.8rem;
   cursor: default;
   flex-wrap: wrap;
 }

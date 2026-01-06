@@ -69,6 +69,10 @@ a:hover {
   .faq-section {
     padding: 1rem;
   }
+
+  .faq-section h3 {
+    font-size: 1.2rem;
+  }
 }
 
 .centered-div {
@@ -84,6 +88,7 @@ a:hover {
   align-items: center;
   gap: 2rem;
   user-select: none;
+  flex-wrap: wrap;
 }
 
 .position-section {
@@ -317,6 +322,12 @@ a:hover {
   margin: 1rem;
 }
 
+.merch-img {
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+}
+
 @media (max-width: 600px) {
   .about-section,
   .values-section {
@@ -338,10 +349,6 @@ a:hover {
 
   .centered-div {
     padding: 0rem 1rem;
-  }
-
-  .contact-card {
-    padding: 1rem;
   }
 
   .contact-card h3 {
@@ -388,11 +395,6 @@ a:hover {
     font-size: 0.7rem;
   }
 
-  .contact-card {
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
   .contact-methods,
   .values-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -401,7 +403,7 @@ a:hover {
   }
 
   .contact-card {
-    padding: 1.5rem;
+    padding: 0.25rem 1rem 0.25rem;
     margin: 0;
   }
 
@@ -424,5 +426,9 @@ a:hover {
 
   .bottom-underline h1 {
     margin-bottom: 1rem;
+  }
+
+  .center-flex {
+    gap: 0.5rem;
   }
 }

@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
       <h2>Connect with Us</h2>
-      <div className="main" style={{ gap: "10rem", padding: "1rem 0rem" }}>
+      <div className="main-outer">
         <div className="main">
           <div className="footer-section">
             <div>

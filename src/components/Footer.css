@@ -15,6 +15,16 @@
   margin-bottom: 1rem;
 }
 
+.main-outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 10rem;
+  padding: 1rem 0rem;
+}
+
 .footer-section img {
   max-width: 4rem;
   border-radius: 1rem;
@@ -45,12 +55,16 @@
   margin: 0 2rem;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 600px) {
   .main {
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .main-outer {
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem;
+    gap: 3rem;
   }
 
   .footer-section:first-child,
@@ -60,20 +74,13 @@
 
   .footer-section {
     width: 100%;
-    max-width: 300px;
   }
 
   .footer-section img {
     max-width: 3.5rem;
   }
-}
 
-@media screen and (max-width: 480px) {
   .footer {
     font-size: 1rem;
-  }
-
-  .footer-section img {
-    max-width: 3rem;
   }
 }
