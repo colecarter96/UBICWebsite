@@ -318,12 +318,19 @@ const HomePage = () => {
 
           {/* Section 2.5: Events This Week Section*/}
           <section className="background-section">
-            <h2 style={{ margin: "0rem 0rem 3rem" }}>Events This Week</h2>
+            <h2 style={{ margin: "0rem 0rem 2rem" }}>Calendar</h2>
             <p className="centered-paragraph">
               Make sure to join our Discord, Instagram, and Newsletter on our
               Linktree for upcoming events.
             </p>
-            <EventsGallery></EventsGallery>
+            <iframe
+              title="calendar"
+              src="https://calendar.google.com/calendar/embed?src=c_3d9b6840352f884dac553b8de310f282e3bceaffc55e26d95960592a782c0971%40group.calendar.google.com&ctz=America%2FLos_Angeles"
+              className="calendar"
+              frameborder="0"
+            ></iframe>
+            {/* <h2 style={{ margin: "2rem 0rem 2rem" }}>Events This Week</h2>
+            <EventsGallery></EventsGallery> */}
           </section>
 
           <div className="contact-methods">
@@ -387,6 +394,10 @@ const HomePage = () => {
               Merch Interest Form
             </a> */}
           </div>
+          <p style={{ marginBottom: "1.5rem" }}>
+            Official deadline has passed. Contact{" "}
+            <a href="mailto:ubic@ucsd.edu">ubic@ucsd.edu</a> if interested!
+          </p>
           <div className="center-flex">
             <ImageKitProvider urlEndpoint={URL_ENDPOINT}>
               <Image
@@ -413,10 +424,6 @@ const HomePage = () => {
             </ImageKitProvider>
           </div>
         </section>
-        <p>
-          Official deadline has passed. Contact{" "}
-          <a href="mailto:ubic@ucsd.edu">ubic@ucsd.edu</a> if interested!
-        </p>
 
         {/* Section 4: Resources Section*/}
         <section

@@ -15,13 +15,14 @@ h3 {
   margin: 1rem 0rem;
 }
 p,
-.center-flex li {
+li {
   color: #333;
   line-height: 1.6;
   font-size: 1.1rem;
   font-weight: 500;
   user-select: auto;
 }
+
 a {
   color: #19a4a4;
   background-color: transparent;
@@ -287,6 +288,7 @@ a:hover {
   border-radius: 4px;
   transition: background-color 0.2s ease;
 }
+
 /* Mobile / non-hover devices */
 @media (max-width: 600px) {
   .contact-link {
@@ -308,11 +310,14 @@ a:hover {
   padding: 10px;
 }
 
-@media (max-width: 600px) {
-  .about-content {
-    padding-top: 5rem;
-  }
+.calendar {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  margin: 1rem;
+}
 
+@media (max-width: 600px) {
   .about-section,
   .values-section {
     padding: 1rem;
@@ -322,7 +327,8 @@ a:hover {
     font-size: 2rem;
   }
 
-  p {
+  p,
+  li {
     font-size: 0.7rem;
   }
 
@@ -355,7 +361,7 @@ a:hover {
   }
 
   .about-content {
-    padding-top: 6rem;
+    padding-top: 1.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
@@ -414,5 +420,9 @@ a:hover {
   }
   .application-card p {
     font-size: 0.7rem;
+  }
+
+  .bottom-underline h1 {
+    margin-bottom: 1rem;
   }
 }
