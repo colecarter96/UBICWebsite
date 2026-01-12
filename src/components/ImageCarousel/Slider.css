@@ -129,3 +129,10 @@
 .dot:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+@media (max-width: 768px) {
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+}
