@@ -62,6 +62,7 @@ function EventsGallery() {
           <Image
             key={event.id}
             src={event.imagePath}
+            className="merch-img"
             transformation={[{ width: 300, height: 300 }]}
           />
         ))}

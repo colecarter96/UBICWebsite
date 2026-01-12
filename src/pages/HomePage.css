@@ -319,7 +319,7 @@ a:hover {
   width: 100%;
   height: auto;
   aspect-ratio: 16/9;
-  margin: 1rem;
+  margin: 1rem auto;
 }
 
 .merch-img {

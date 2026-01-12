@@ -416,13 +416,24 @@ const HomePage = () => {
           <div className="bottom-underline">
             <h1>Resources</h1>
           </div>
-          <h3 style={{ margin: "2rem auto" }}>Coming Soon!</h3>
+          <a
+            href="https://docs.google.com/spreadsheets/d/1TBdmHMDncvtJjsSszSSv7tPSTV1Xi3JAgC-KZ4ncJ2A/edit?usp=sharing"
+            className="merch-button"
+          >
+            <img
+              src="/link.svg"
+              alt="link"
+              height="30px"
+              style={{ filter: "invert(100%)" }}
+            ></img>
+            4 Year Planning Guide
+          </a>
+          <h3 style={{ margin: "3rem auto 2rem" }}>Coming Soon!</h3>
           <div className="center-flex">
             <ul style={{ textAlign: "left" }}>
               <li>Bioinformatics Handbook (UBIC Version)</li>
               <li>Official Handbook</li>
               <li>Industry 101 & Contacts</li>
-              <li>4 Year Planning Guide</li>
             </ul>
           </div>
         </section>

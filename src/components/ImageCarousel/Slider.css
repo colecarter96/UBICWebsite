@@ -4,11 +4,11 @@
 }
 
 :root {
-  --heights: 85vh; /* Change Height of Carousel Here */
+  --heights: 85vh;
   --widths: 100%;
 }
 
-slider-container {
+.slider-container {
   height: var(--heights);
   width: var(--widths);
   position: relative;
@@ -112,7 +112,7 @@ slider-container {
   width: 100%;
   position: absolute;
   display: flex;
-  top: 80%; /* Change Location of Dots Here */
+  bottom: 1rem;
   justify-content: center;
   z-index: 50;
 }
