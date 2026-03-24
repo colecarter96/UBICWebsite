@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "ubic-ucsd",
+    "site": "ubic-at-ucsd",
     "public": "build",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
